@@ -1,0 +1,55 @@
+{
+  "title": "EVI Nav2 Mission Console",
+  "ros_domain_id": 59,
+  "map_frame": "map",
+  "base_frame": "base_footprint",
+  "ws_hz": 20.0,
+  "scene_hz": 10.0,
+  "map_hz": 2.0,
+  "camera_stream_url": "http://127.0.0.1:8080/api/stream.mjpg",
+  "topics": {
+    "map": "/map",
+    "scan": "/scan",
+    "amcl_pose": "/amcl_pose",
+    "global_path": "/plan",
+    "local_path": "/local_plan",
+    "odom": "/odom_combined"
+  },
+  "actions": {
+    "navigate_to_pose": "/navigate_to_pose"
+  },
+  "operations": {
+    "mapping_start": {
+      "label": "开始建图",
+      "mode": "process",
+      "command": [
+        "bash",
+        "/home/wheeltec/evi/evi_dashboard/board_agent/start_mapping_app.sh"
+      ]
+    },
+    "mapping_stop": {
+      "label": "停止建图",
+      "mode": "signal",
+      "target": "mapping_start"
+    },
+    "navigation_start": {
+      "label": "启动导航",
+      "mode": "process",
+      "command": [
+        "bash",
+        "/home/wheeltec/evi/evi_dashboard/board_agent/start_nav2_app.sh"
+      ]
+    },
+    "navigation_stop": {
+      "label": "停止导航",
+      "mode": "signal",
+      "target": "navigation_start"
+    },
+    "save_map": {
+      "label": "保存地图",
+      "mode": "save_map",
+      "output_dir": "/home/wheeltec/evi/a3_nav2"
+    }
+  }
+}
+

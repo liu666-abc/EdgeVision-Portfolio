@@ -1,0 +1,24 @@
+[INFO] [launch]: All log files can be found below /home/wheeltec/.ros/log/2000-01-01-10-31-12-788716-wheeltec-430473
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [astra_camera_node-1]: process started with pid [430485]
+[astra_camera_node-1] Warning: class_loader.impl: SEVERE WARNING!!! A namespace collision has occurred with plugin factory for class rclcpp_components::NodeFactoryTemplate<astra_camera::OBCameraNodeFactory>. New factory will OVERWRITE existing one. This situation occurs when libraries containing plugins are directly linked against an executable (the one running right now generating this message). Please separate plugins out into their own library or just don't link against the library and use either class_loader::ClassLoader/MultiLibraryClassLoader to open.
+[astra_camera_node-1]          at line 253 in /opt/ros/humble/include/class_loader/class_loader/class_loader_core.hpp
+[astra_camera_node-1] [INFO] [0946693874.755582752] [camera.camera]: init done.
+[astra_camera_node-1] [INFO] [0946693874.755739210] [camera.camera]: Waiting for device connection...
+[astra_camera_node-1] [INFO] [0946693874.756567544] [device_listener]: Found 1 devices
+[astra_camera_node-1] [INFO] [0946693874.756652419] [camera.camera]: Trying to open device: 2bc5/0402@1/10
+[astra_camera_node-1] [INFO] [0946693874.918888819] [camera.camera]: Device connected: Astra serial number: 17120911684
+[astra_camera_node-1] [INFO] [0946693874.919073152] [camera.camera]: starting device 
+[astra_camera_node-1] [INFO] [0946693874.985893780] [camera.camera]: ir is not enable
+[astra_camera_node-1] [INFO] [0946693875.075991424] [camera.camera]: set depth video mode Resolution :640x480@30Hz
+[astra_camera_node-1] format PIXEL_FORMAT_DEPTH_1_MM
+[astra_camera_node-1] [INFO] [0946693875.076904883] [camera.camera]: set color video mode Resolution :640x480@30Hz
+[astra_camera_node-1] format 
+[astra_camera_node-1] [WARN] [0946693875.101548608] [camera.camera]: Publishing dynamic camera transforms (/tf) at 10 Hz
+[astra_camera_node-1] [INFO] [0946693875.101556191] [camera.camera]: set depth video mode Resolution :640x480@30Hz
+[astra_camera_node-1] format PIXEL_FORMAT_DEPTH_1_MM
+[astra_camera_node-1] [INFO] [0946693875.102751900] [camera.camera]: set color video mode Resolution :640x480@30Hz
+[astra_camera_node-1] format 
+[astra_camera_node-1] [INFO] [0946693875.115428742] [camera.camera]: depth is started
+[astra_camera_node-1] [INFO] [0946693875.633118046] [camera.camera]: color is started
+[astra_camera_node-1] [INFO] [0946693875.633840755] [camera.camera]: device  started.

@@ -1,0 +1,7 @@
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+eth0             UP             192.168.128.10/24 fe80::db05:bdaa:2f84:a5ac/64 
+tunl0@NONE       DOWN           
+sit0@NONE        DOWN           
+can0             DOWN           
+wlan0            UP             192.168.0.100/24 
+usb0             DOWN           

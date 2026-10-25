@@ -1,0 +1,1 @@
+Linux wheeltec 6.1.83 #2 SMP PREEMPT Fri Jun 13 15:14:57 CST 2025 aarch64 aarch64 aarch64 GNU/Linux

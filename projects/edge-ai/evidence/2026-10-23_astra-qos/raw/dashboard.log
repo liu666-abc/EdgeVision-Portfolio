@@ -1,0 +1,2 @@
+dashboard listening on http://0.0.0.0:8080 web_root=/home/wheeltec/evi/evi_dashboard/web
+[INFO] [0946693966.723480896] [evi_dashboard_agent]: dashboard image=/camera/color/image_raw detections=/evi/detections

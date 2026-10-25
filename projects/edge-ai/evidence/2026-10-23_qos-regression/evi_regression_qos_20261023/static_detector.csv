@@ -1,0 +1,11 @@
+seq,image,detections,read_ms,letterbox_ms,nv12_ms,preprocess_ms,infer_ms,decode_ms,total_ms
+1,/home/wheeltec/evi/cpp_pipeline_ws/images_test/000000000139.jpg,6,189.746,5.59892,13.9847,209.329,11.5159,4.44175,225.29
+2,/home/wheeltec/evi/cpp_pipeline_ws/images_test/000000000285.jpg,1,25.5709,1.78229,11.2473,38.6004,6.47517,4.17842,49.2565
+3,/home/wheeltec/evi/cpp_pipeline_ws/images_test/000000000632.jpg,4,16.049,1.72313,11.447,29.2191,6.41984,3.56313,39.2037
+4,/home/wheeltec/evi/cpp_pipeline_ws/images_test/000000000724.jpg,1,11.0269,9.63922,9.61922,30.2853,6.3228,3.33471,39.9454
+5,/home/wheeltec/evi/cpp_pipeline_ws/images_test/000000000776.jpg,3,13.1475,0.999334,9.20696,23.3538,6.16684,3.50767,33.03
+6,/home/wheeltec/evi/cpp_pipeline_ws/images_test/000000000785.jpg,2,11.6223,1.01671,9.1618,21.8008,6.11792,3.469,31.3896
+7,/home/wheeltec/evi/cpp_pipeline_ws/images_test/000000000802.jpg,2,9.32763,1.01629,9.33192,19.6758,6.00363,3.49258,29.1741
+8,/home/wheeltec/evi/cpp_pipeline_ws/images_test/000000000872.jpg,2,19.5018,1.40288,9.08221,29.9869,6.02046,3.455,39.4644
+9,/home/wheeltec/evi/cpp_pipeline_ws/images_test/000000000885.jpg,4,10.8084,0.82075,9.39505,21.0242,6.21717,3.52684,30.7701
+10,/home/wheeltec/evi/cpp_pipeline_ws/images_test/000000001000.jpg,10,17.8086,0.876959,9.33471,28.0203,6.3063,3.75963,38.088

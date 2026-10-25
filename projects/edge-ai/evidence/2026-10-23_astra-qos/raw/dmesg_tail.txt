@@ -1,0 +1,120 @@
+[   13.519512] bpu-core 3a000000.bpu: Can't get bpu power delay, use default
+[   13.519528] bpu-core 3a000000.bpu: Looking up cnn-supply from device tree
+[   13.526297] bpu_hw_io_x5: loading out-of-tree module taints kernel.
+[   13.526325] bpu_hw_io_x5: module license 'Proprietary' taints kernel.
+[   13.526330] Disabling lock debugging due to kernel taint
+[   13.526797] bpu-core: hw-io: git commit: 42566cb
+[   13.569693] hpu3501-rtc hpu3501-rtc.1.auto: registered as rtc0
+[   13.570583] hpu3501-rtc hpu3501-rtc.1.auto: setting system clock to 2000-01-01T00:00:19 UTC (946684819)
+[   13.810877] 20510500.sif_qos QoS not initialized! Skipping!
+[   13.811170] 20510280.isp_qos QoS not initialized! Skipping!
+[   13.811440] 20510100.dw230_qos QoS not initialized! Skipping!
+[   13.835623] Config 20540080.gpu3d_qos qos read: 0 write: 0 done
+[   13.866629] Config 20520000.bpu_qos qos read: 0 write: 0 done
+[   13.890670] Config 20540000.gpu2d_qos qos read: 0 write: 0 done
+[   13.897666] Config 20550100.gmac_qos qos read: 0 write: 0 done
+[   13.904836] Config 20510000.bt1120_qos qos read: 0 write: 0 done
+[   13.911992] Config 20510080.dc8000_qos qos read: 0 write: 0 done
+[   13.923151] Config 20530000.video_qos qos read: 0 write: 0 done
+[   13.934363] Config 20530080.jpeg_qos qos read: 0 write: 0 done
+[   14.766459] Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+[   14.766482] Bluetooth: BNEP filters: protocol multicast
+[   14.766498] Bluetooth: BNEP socket layer initialized
+[   14.770760] Bluetooth: MGMT ver 1.22
+[   14.793602] Bluetooth: hci0: Opcode 0x0c7a failed: -16
+[   15.290239] asoc-duplex-host-card snd0: asoc_simple_probe end
+[   15.501382] start to add opp table.
+[   15.501400] finish to add opp table 4.
+[   15.501447] Galcore version 6.4.14.9.674707
+[   15.558347] nano2d 3c010000.gc820: Adding to iommu group 9
+[   15.558455] nano2d 3c010000.gc820: clk name: pclk, freq = 100000000.
+[   15.558472] nano2d 3c010000.gc820: clk name: aclk, freq = 750000000.
+[   15.558485] nano2d 3c010000.gc820: clk name: clk1x, freq = 750000000.
+[   15.558625] gpu_parse_dt: register base(3c010000), irq(76).
+[   15.559298] create /dev/nano2d device.
+[   15.559413] Insmod parameters:
+[   15.559419] device[0] core[0]
+[   15.559425]   irq line:76
+[   15.559430]   register base:0x3c010000
+[   15.559435]   register size:0x10000
+
+[   15.559443]   iommu enabled
+[   15.559447]   contiguous base:0x0
+[   15.559451]   contiguous size:0x0
+[   15.559456]   command contiguous base:0x0
+[   15.559461]   command contiguous size:0x0
+
+[   15.562133] [VPF mgr]:[L271]vpf_alloc_minor_number: minor[0] bit31 is used
+[   15.562362] [VPF mgr]:[L271]vpf_alloc_minor_number: minor[1] bit0 is used
+[   15.562503] [VPF mgr]:[L271]vpf_alloc_minor_number: minor[1] bit1 is used
+[   15.562629] [VPF mgr]:[L271]vpf_alloc_minor_number: minor[1] bit2 is used
+[   15.562746] [VPF mgr]:[L271]vpf_alloc_minor_number: minor[1] bit3 is used
+[   15.634733] vs-disp-sif 3e080000.vs-sif: Adding to iommu group 3
+[   15.639765] vs-dc 3e000000.dc8000Nano: Adding to iommu group 4
+[   15.645109] vs-bt1120 3e010000.bt1120: Adding to iommu group 5
+[   15.676327] vs-drm 3e000000.disp_apb:display-subsystem: bound 3e080000.vs-sif (ops sif_component_ops [vs_drm])
+[   15.676570] vs-drm 3e000000.disp_apb:display-subsystem: bound 3e000000.dc8000Nano (ops dc_component_ops [vs_drm])
+[   15.676698] vs-drm 3e000000.disp_apb:display-subsystem: bound 3e010000.bt1120 (ops bt1120_component_ops [vs_drm])
+[   15.676737] vs-drm 3e000000.disp_apb:display-subsystem: bound 3e000000.disp_apb:bt1120_bridge (ops bt1120_bridge_component_ops [vs_drm])
+[   15.676771] vs-drm 3e000000.disp_apb:display-subsystem: bound 3e000000.disp_apb:bt1120_bridge_wb (ops bt1120_bridge_component_ops [vs_drm])
+[   15.676902] vs-drm 3e000000.disp_apb:display-subsystem: bound 3e000000.disp_apb:dsi-encoder (ops encoder_component_ops [vs_drm])
+[   15.677006] vs-drm 3e000000.disp_apb:display-subsystem: bound 3e000000.disp_apb:hdmi-encoder (ops encoder_component_ops [vs_drm])
+[   15.678125] [drm] Initialized vs-drm 1.0.0 20191101 for 3e000000.disp_apb:display-subsystem on minor 0
+[   15.810889] hobot_gmac 35010000.horizon_tsn eth0: PHY [hobot-mac-mdio-35010000:00] driver [RTL8211F Gigabit Ethernet] (irq=POLL)
+[   15.820649] hobot_gmac 35010000.horizon_tsn eth0: mac_config_rx_queues_routing, not support packet mode :\x02
+[   15.820718] hobot_gmac 35010000.horizon_tsn eth0: configuring for phy/rgmii-id link mode
+[   15.873175] get_txpwr_max:txpwr_max:18 
+[   15.887497] get_txpwr_max:txpwr_max:18 
+[   16.062582] NFSD: Using nfsdcld client tracking operations.
+[   16.062602] NFSD: no clients to reclaim, skipping NFSv4 grace period (net f0000000)
+[   18.278283] aicwf_sdio mmc2:390b:1 wlan0: CLOSE
+[   18.279369] rwnx_send_msg1 (9)MM_REMOVE_IF_CFM reqcfm:1 in_irq:0 in_softirq:0 in_atomic:0
+[   18.280715] ieee80211 phy0: HT supp 1, VHT supp 1, HE supp 1
+[   19.384588] get_txpwr_max:txpwr_max:18 
+[   19.384654] get_txpwr_max:txpwr_max:18 
+[   19.385191] get_txpwr_max:txpwr_max:18 
+[   19.385243] change_if: 2 to 3, 8, 2
+[   19.385736] rwnx_send_msg1 (9)MM_REMOVE_IF_CFM reqcfm:1 in_irq:0 in_softirq:0 in_atomic:0
+[   19.385901] change_if from 0 
+[   19.386053] change_if to 1 
+[   19.386065] get_txpwr_max:txpwr_max:18 
+[   19.388815] get_txpwr_max:txpwr_max:18 
+[   19.391786] rwnx_cfg80211_del_station_compat: (null)
+[   19.417383] get_txpwr_max:txpwr_max:18 
+[   19.648638] IPv6: ADDRCONF(NETDEV_CHANGE): wlan0: link becomes ready
+[   19.648824] aicwf_sdio mmc2:390b:1 wlan0: AP started: ch=0, bcmc_idx=33 channel=5180 bw=1
+[   20.022405] hobot_gmac 35010000.horizon_tsn eth0: Link is Up - 1Gbps/Full - flow control rx/tx
+[   20.022448] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+[   20.527060] es8326 7-0018: Clock coefficients do not match
+[   20.885790] es8326 7-0018: Clock coefficients do not match
+[   20.926738] es8326 7-0018: Clock coefficients do not match
+[   21.250031] es8326 7-0018: Clock coefficients do not match
+[   21.278169] es8326 7-0018: Clock coefficients do not match
+[   21.695161] FAT-fs (mmcblk1p1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+[   21.771009] xhci-hcd xhci-hcd.2.auto: WARN: buffer overrun event for slot 5 ep 6 on endpoint
+[   22.150971] xhci-hcd xhci-hcd.2.auto: WARN: buffer overrun event for slot 10 ep 6 on endpoint
+[   22.151959] xhci-hcd xhci-hcd.2.auto: WARN: buffer overrun event for slot 10 ep 6 on endpoint
+[   22.472510] Bluetooth: RFCOMM TTY layer initialized
+[   22.472553] Bluetooth: RFCOMM socket layer initialized
+[   22.472582] Bluetooth: RFCOMM ver 1.11
+[   22.506924] xhci-hcd xhci-hcd.2.auto: WARN: buffer overrun event for slot 10 ep 6 on endpoint
+[   22.508925] xhci-hcd xhci-hcd.2.auto: WARN: buffer overrun event for slot 10 ep 6 on endpoint
+[   23.167853] xhci-hcd xhci-hcd.2.auto: WARN: buffer overrun event for slot 10 ep 6 on endpoint
+[   23.169847] xhci-hcd xhci-hcd.2.auto: WARN: buffer overrun event for slot 10 ep 6 on endpoint
+[   23.828790] xhci-hcd xhci-hcd.2.auto: WARN: buffer overrun event for slot 10 ep 6 on endpoint
+[   23.830791] xhci-hcd xhci-hcd.2.auto: WARN: buffer overrun event for slot 10 ep 6 on endpoint
+[   24.489729] xhci-hcd xhci-hcd.2.auto: WARN: buffer overrun event for slot 10 ep 6 on endpoint
+[   24.491724] xhci-hcd xhci-hcd.2.auto: WARN: buffer overrun event for slot 10 ep 6 on endpoint
+[   25.150657] xhci-hcd xhci-hcd.2.auto: WARN: buffer overrun event for slot 10 ep 6 on endpoint
+[   25.152656] xhci-hcd xhci-hcd.2.auto: WARN: buffer overrun event for slot 10 ep 6 on endpoint
+[   25.811587] xhci-hcd xhci-hcd.2.auto: WARN: buffer overrun event for slot 10 ep 6 on endpoint
+[   25.813586] xhci-hcd xhci-hcd.2.auto: WARN: buffer overrun event for slot 10 ep 6 on endpoint
+[   26.472521] xhci-hcd xhci-hcd.2.auto: WARN: buffer overrun event for slot 10 ep 6 on endpoint
+[   26.474519] xhci-hcd xhci-hcd.2.auto: WARN: buffer overrun event for slot 10 ep 6 on endpoint
+[   27.133452] xhci-hcd xhci-hcd.2.auto: WARN: buffer overrun event for slot 10 ep 6 on endpoint
+[   27.133491] retire_capture_urb: 7 callbacks suppressed
+[   27.135448] xhci-hcd xhci-hcd.2.auto: WARN: buffer overrun event for slot 10 ep 6 on endpoint
+[   29.922974] using random self ethernet address
+[   29.922992] using random host ethernet address
+[   30.247302] usb0: HOST MAC 46:59:a6:b5:5e:0d
+[   30.247324] usb0: MAC 8a:63:85:70:06:4a

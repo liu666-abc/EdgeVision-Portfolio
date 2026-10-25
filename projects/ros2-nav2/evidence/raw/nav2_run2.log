@@ -1,0 +1,886 @@
+[INFO] [launch]: All log files can be found below /home/wheeltec/.ros/log/2000-01-01-09-24-36-645779-wheeltec-24122
+[INFO] [launch]: Default logging verbosity is set to INFO
+car_mode:mini_akm
+/home/wheeltec/wheeltec_ros2/install/wheeltec_nav2/share/wheeltec_nav2/param/wheeltec_params/param_mini_akm.yaml
+imu_mode:stm32
+ultrasonic_avoid:False
+[INFO] [launch.user]: [ekf launch] carto_slam=false, robot_nav=false
+car_mode:mini_akm
+lidar_type:ls_N10Plus_uart
+[INFO] [nav2_waypoint_cycle-1]: process started with pid [24158]
+[INFO] [ImuProcessor-2]: process started with pid [24160]
+[INFO] [wheeltec_robot_node-3]: process started with pid [24162]
+[INFO] [joint_state_publisher-4]: process started with pid [24164]
+[INFO] [ekf_node-5]: process started with pid [24166]
+[INFO] [robot_state_publisher-6]: process started with pid [24168]
+[INFO] [static_transform_publisher-7]: process started with pid [24170]
+[INFO] [static_transform_publisher-8]: process started with pid [24172]
+[INFO] [static_transform_publisher-9]: process started with pid [24174]
+[INFO] [static_transform_publisher-10]: process started with pid [24176]
+[INFO] [static_transform_publisher-11]: process started with pid [24184]
+[INFO] [lslidar_driver_node-12]: process started with pid [24191]
+[INFO] [component_container_isolated-13]: process started with pid [24201]
+[static_transform_publisher-7] [WARN] [0946689884.054086975] []: Old-style arguments are deprecated; see --help for new-style arguments
+[static_transform_publisher-8] [WARN] [0946689884.083786953] []: Old-style arguments are deprecated; see --help for new-style arguments
+[static_transform_publisher-9] [WARN] [0946689884.116516516] []: Old-style arguments are deprecated; see --help for new-style arguments
+[static_transform_publisher-10] [WARN] [0946689884.141438450] []: Old-style arguments are deprecated; see --help for new-style arguments
+[static_transform_publisher-11] [WARN] [0946689884.213593915] []: Old-style arguments are deprecated; see --help for new-style arguments
+[static_transform_publisher-9] [INFO] [0946689884.495695270] [base_to_link]: Spinning until stopped - publishing transform
+[static_transform_publisher-9] translation: ('0.000000', '0.000000', '0.019000')
+[static_transform_publisher-9] rotation: ('0.000000', '0.000000', '0.000000', '1.000000')
+[static_transform_publisher-9] from 'base_footprint' to 'base_link'
+[robot_state_publisher-6] [WARN] [0946689884.524073997] [robot_state_publisher]: No robot_description parameter, but command-line argument available.  Assuming argument is name of URDF file.  This backwards compatibility fallback will be removed in the future.
+[static_transform_publisher-7] [INFO] [0946689884.569532611] [base_to_laser]: Spinning until stopped - publishing transform
+[static_transform_publisher-7] translation: ('0.051340', '0.000000', '0.094520')
+[static_transform_publisher-7] rotation: ('0.000000', '0.000000', '0.000000', '1.000000')
+[static_transform_publisher-7] from 'base_footprint' to 'laser'
+[static_transform_publisher-10] [INFO] [0946689884.571130695] [base_to_gyro]: Spinning until stopped - publishing transform
+[static_transform_publisher-10] translation: ('0.000000', '0.000000', '0.000000')
+[static_transform_publisher-10] rotation: ('0.000000', '0.000000', '0.000000', '1.000000')
+[static_transform_publisher-10] from 'base_footprint' to 'gyro_link'
+[lslidar_driver_node-12] [1m[34m************ Lslidar ROS driver version: 5.1.1 ************[0m
+[static_transform_publisher-8] [INFO] [0946689884.660253588] [base_to_camera]: Spinning until stopped - publishing transform
+[static_transform_publisher-8] translation: ('0.113650', '0.000170', '0.076200')
+[static_transform_publisher-8] rotation: ('0.000000', '0.000000', '0.000000', '1.000000')
+[static_transform_publisher-8] from 'base_footprint' to 'camera_link'
+[lslidar_driver_node-12] [1m[34mpcap file: [0m
+[lslidar_driver_node-12] [1m[34mpacket rate: 188[0m
+[lslidar_driver_node-12] [1m[34mframe id: laser[0m
+[lslidar_driver_node-12] [1m[34mpointcloud topic: lslidar_point_cloud[0m
+[lslidar_driver_node-12] [1m[34muse time service: false[0m
+[lslidar_driver_node-12] [1m[34muse first point time: false[0m
+[lslidar_driver_node-12] [1m[34mpublish scan: true[0m
+[lslidar_driver_node-12] [1m[34muse high precision mode: false[0m
+[lslidar_driver_node-12] [1m[34mpublish multiecholaserscan: false[0m
+[lslidar_driver_node-12] [1m[34menable noise filter: false[0m
+[lslidar_driver_node-12] [1m[34mmin range: 0.15[0m
+[lslidar_driver_node-12] [1m[34mmax range: 50[0m
+[lslidar_driver_node-12] [1m[34mN10Plus hz: 10[0m
+[lslidar_driver_node-12] [1m[36mOnly accepting serial data from: /dev/wheeltec_lidar[0m
+[lslidar_driver_node-12] [1m[37mLidar model: N10Plus[0m
+[wheeltec_robot_node-3] [INFO] [0946689884.728309217] [wheeltec_robot]: wheeltec_robot Data ready
+[wheeltec_robot_node-3] [INFO] [0946689884.733951096] [wheeltec_robot]: wheeltec_robot serial port opened
+[lslidar_driver_node-12] [1m[37mSuccessfully opened serial port/dev/wheeltec_lidar at 460800 baud.[0m
+[lslidar_driver_node-12] [1m[32msart_init_angle[0m
+[lslidar_driver_node-12] [1m[34msart_angle:0--end_angle: 36000[0m
+[ekf_node-5] RosFilter<T>::loadParams() - unable to create debug output file /home/wheeltec/debug/file.txt
+[static_transform_publisher-11] [INFO] [0946689884.801043682] [base_to_radar]: Spinning until stopped - publishing transform
+[static_transform_publisher-11] translation: ('0.000000', '0.000000', '0.300000')
+[static_transform_publisher-11] rotation: ('0.000000', '0.000000', '0.000000', '1.000000')
+[static_transform_publisher-11] from 'base_footprint' to 'radar'
+[component_container_isolated-13] [INFO] [0946689884.934017563] [nav2_container]: Load Library: /home/wheeltec/wheeltec_ros2/install/nav2_map_server/lib/libmap_server_core.so
+[component_container_isolated-13] [INFO] [0946689885.023331039] [nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_map_server::CostmapFilterInfoServer>
+[component_container_isolated-13] [INFO] [0946689885.023683206] [nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_map_server::MapSaver>
+[component_container_isolated-13] [INFO] [0946689885.023739623] [nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_map_server::MapServer>
+[component_container_isolated-13] [INFO] [0946689885.023832706] [nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_map_server::MapServer>
+[robot_state_publisher-6] [WARN] [0946689885.082723996] [kdl_parser]: The root link base_link has an inertia specified in the URDF, but KDL does not support a root link with an inertia.  As a workaround, you can add an extra dummy link to your URDF.
+[robot_state_publisher-6] [INFO] [0946689885.083125871] [robot_state_publisher]: got segment base_link
+[robot_state_publisher-6] [INFO] [0946689885.083279038] [robot_state_publisher]: got segment camera_link
+[robot_state_publisher-6] [INFO] [0946689885.083357121] [robot_state_publisher]: got segment controller_link
+[robot_state_publisher-6] [INFO] [0946689885.083409413] [robot_state_publisher]: got segment front_link
+[robot_state_publisher-6] [INFO] [0946689885.083452746] [robot_state_publisher]: got segment laser_link
+[robot_state_publisher-6] [INFO] [0946689885.083491454] [robot_state_publisher]: got segment lb_link
+[robot_state_publisher-6] [INFO] [0946689885.083529663] [robot_state_publisher]: got segment left_link
+[robot_state_publisher-6] [INFO] [0946689885.083564996] [robot_state_publisher]: got segment lf_link
+[robot_state_publisher-6] [INFO] [0946689885.083601746] [robot_state_publisher]: got segment rb_link
+[robot_state_publisher-6] [INFO] [0946689885.083636121] [robot_state_publisher]: got segment rf_link
+[robot_state_publisher-6] [INFO] [0946689885.083672746] [robot_state_publisher]: got segment right_link
+[component_container_isolated-13] [INFO] [0946689885.144484370] [map_server]: 
+[component_container_isolated-13] 	map_server lifecycle node launched. 
+[component_container_isolated-13] 	Waiting on external lifecycle transitions to activate
+[component_container_isolated-13] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[component_container_isolated-13] [INFO] [0946689885.144721787] [map_server]: Creating
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/map_server' in container '/nav2_container'
+[component_container_isolated-13] [INFO] [0946689885.155370211] [nav2_container]: Load Library: /home/wheeltec/wheeltec_ros2/install/nav2_controller/lib/libcontroller_server_core.so
+[component_container_isolated-13] [INFO] [0946689885.189757026] [nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_controller::ControllerServer>
+[component_container_isolated-13] [INFO] [0946689885.189925609] [nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_controller::ControllerServer>
+[component_container_isolated-13] [INFO] [0946689885.305523686] [controller_server]: 
+[component_container_isolated-13] 	controller_server lifecycle node launched. 
+[component_container_isolated-13] 	Waiting on external lifecycle transitions to activate
+[component_container_isolated-13] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[component_container_isolated-13] [INFO] [0946689885.395149204] [controller_server]: Creating controller server
+[component_container_isolated-13] [INFO] [0946689885.490753602] [local_costmap.local_costmap]: 
+[component_container_isolated-13] 	local_costmap lifecycle node launched. 
+[component_container_isolated-13] 	Waiting on external lifecycle transitions to activate
+[component_container_isolated-13] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[component_container_isolated-13] [INFO] [0946689885.502715235] [local_costmap.local_costmap]: Creating Costmap
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/controller_server' in container '/nav2_container'
+[component_container_isolated-13] [INFO] [0946689885.521612539] [nav2_container]: Load Library: /home/wheeltec/wheeltec_ros2/install/nav2_amcl/lib/libamcl_core.so
+[component_container_isolated-13] [INFO] [0946689885.538136717] [nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_amcl::AmclNode>
+[component_container_isolated-13] [INFO] [0946689885.538302925] [nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_amcl::AmclNode>
+[component_container_isolated-13] [INFO] [0946689885.608974722] [amcl]: 
+[component_container_isolated-13] 	amcl lifecycle node launched. 
+[component_container_isolated-13] 	Waiting on external lifecycle transitions to activate
+[component_container_isolated-13] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[component_container_isolated-13] [INFO] [0946689885.616897436] [amcl]: Creating
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/amcl' in container '/nav2_container'
+[component_container_isolated-13] [INFO] [0946689885.678911603] [nav2_container]: Load Library: /home/wheeltec/wheeltec_ros2/install/nav2_smoother/lib/libsmoother_server_core.so
+[component_container_isolated-13] [INFO] [0946689885.689915610] [nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_smoother::SmootherServer>
+[component_container_isolated-13] [INFO] [0946689885.690083610] [nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_smoother::SmootherServer>
+[component_container_isolated-13] [INFO] [0946689885.796961140] [smoother_server]: 
+[component_container_isolated-13] 	smoother_server lifecycle node launched. 
+[component_container_isolated-13] 	Waiting on external lifecycle transitions to activate
+[component_container_isolated-13] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[component_container_isolated-13] [INFO] [0946689885.830827454] [smoother_server]: Creating smoother server
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/smoother_server' in container '/nav2_container'
+[component_container_isolated-13] [INFO] [0946689885.842490879] [nav2_container]: Load Library: /home/wheeltec/wheeltec_ros2/install/nav2_lifecycle_manager/lib/libnav2_lifecycle_manager_core.so
+[component_container_isolated-13] [INFO] [0946689885.847583924] [nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_lifecycle_manager::LifecycleManager>
+[component_container_isolated-13] [INFO] [0946689885.847732590] [nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_lifecycle_manager::LifecycleManager>
+[component_container_isolated-13] [INFO] [0946689885.910366966] [lifecycle_manager_localization]: Creating
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/lifecycle_manager_localization' in container '/nav2_container'
+[component_container_isolated-13] [INFO] [0946689885.935961524] [lifecycle_manager_localization]: [34m[1mCreating and initializing lifecycle service clients[0m[0m
+[component_container_isolated-13] [INFO] [0946689885.937860817] [nav2_container]: Load Library: /home/wheeltec/wheeltec_ros2/install/nav2_planner/lib/libplanner_server_core.so
+[component_container_isolated-13] [INFO] [0946689885.944046280] [nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_planner::PlannerServer>
+[component_container_isolated-13] [INFO] [0946689885.944212988] [nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_planner::PlannerServer>
+[component_container_isolated-13] [INFO] [0946689885.976178260] [lifecycle_manager_localization]: [34m[1mStarting managed nodes bringup...[0m[0m
+[component_container_isolated-13] [INFO] [0946689885.976387093] [lifecycle_manager_localization]: [34m[1mConfiguring map_server[0m[0m
+[component_container_isolated-13] [INFO] [0946689885.977278677] [map_server]: Configuring
+[component_container_isolated-13] [INFO] [map_io]: Loading yaml file: /home/wheeltec/evi/a3_nav2/map_a4_20261018.yaml
+[component_container_isolated-13] [DEBUG] [map_io]: resolution: 0.05
+[component_container_isolated-13] [DEBUG] [map_io]: origin[0]: -18
+[component_container_isolated-13] [DEBUG] [map_io]: origin[1]: -4.38
+[component_container_isolated-13] [DEBUG] [map_io]: origin[2]: 0
+[component_container_isolated-13] [DEBUG] [map_io]: free_thresh: 0.25
+[component_container_isolated-13] [DEBUG] [map_io]: occupied_thresh: 0.65
+[component_container_isolated-13] [DEBUG] [map_io]: mode: trinary
+[component_container_isolated-13] [DEBUG] [map_io]: negate: 0
+[component_container_isolated-13] [INFO] [map_io]: Loading image_file: /home/wheeltec/evi/a3_nav2/map_a4_20261018.pgm
+[component_container_isolated-13] [INFO] [0946689886.068215488] [planner_server]: 
+[component_container_isolated-13] 	planner_server lifecycle node launched. 
+[component_container_isolated-13] 	Waiting on external lifecycle transitions to activate
+[component_container_isolated-13] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[component_container_isolated-13] [INFO] [0946689886.100393801] [planner_server]: Creating
+[component_container_isolated-13] [DEBUG] [map_io]: Read map /home/wheeltec/evi/a3_nav2/map_a4_20261018.pgm: 708 X 260 map @ 0.05 m/cell
+[component_container_isolated-13] [INFO] [0946689886.241552145] [lifecycle_manager_localization]: [34m[1mConfiguring amcl[0m[0m
+[component_container_isolated-13] [INFO] [0946689886.242308687] [amcl]: Configuring
+[component_container_isolated-13] [INFO] [0946689886.242799479] [amcl]: initTransforms
+[component_container_isolated-13] [INFO] [0946689886.295689098] [global_costmap.global_costmap]: 
+[component_container_isolated-13] 	global_costmap lifecycle node launched. 
+[component_container_isolated-13] 	Waiting on external lifecycle transitions to activate
+[component_container_isolated-13] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[component_container_isolated-13] [INFO] [0946689886.304409229] [global_costmap.global_costmap]: Creating Costmap
+[component_container_isolated-13] [INFO] [0946689886.356740264] [amcl]: initPubSub
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/planner_server' in container '/nav2_container'
+[component_container_isolated-13] [INFO] [0946689886.367603438] [nav2_container]: Load Library: /home/wheeltec/wheeltec_ros2/install/nav2_behaviors/lib/libbehavior_server_core.so
+[component_container_isolated-13] [INFO] [0946689886.393137455] [nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<behavior_server::BehaviorServer>
+[component_container_isolated-13] [INFO] [0946689886.393312163] [nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<behavior_server::BehaviorServer>
+[component_container_isolated-13] [INFO] [0946689886.411681092] [amcl]: Subscribed to map topic.
+[component_container_isolated-13] [INFO] [0946689886.461949209] [lifecycle_manager_localization]: [34m[1mActivating map_server[0m[0m
+[component_container_isolated-13] [INFO] [0946689886.462816127] [map_server]: Activating
+[component_container_isolated-13] [INFO] [0946689886.464188336] [map_server]: Creating bond (map_server) to lifecycle manager.
+[component_container_isolated-13] [INFO] [0946689886.465422378] [amcl]: Received a 708 X 260 map @ 0.050 m/pix
+[component_container_isolated-13] [INFO] [0946689886.543606056] [behavior_server]: 
+[component_container_isolated-13] 	behavior_server lifecycle node launched. 
+[component_container_isolated-13] 	Waiting on external lifecycle transitions to activate
+[component_container_isolated-13] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/behavior_server' in container '/nav2_container'
+[component_container_isolated-13] [INFO] [0946689886.600893719] [nav2_container]: Load Library: /home/wheeltec/wheeltec_ros2/install/nav2_bt_navigator/lib/libbt_navigator_core.so
+[component_container_isolated-13] [INFO] [0946689886.602837637] [lifecycle_manager_localization]: Server map_server connected with bond.
+[component_container_isolated-13] [INFO] [0946689886.603014512] [lifecycle_manager_localization]: [34m[1mActivating amcl[0m[0m
+[component_container_isolated-13] [INFO] [0946689886.603759054] [amcl]: Activating
+[component_container_isolated-13] [INFO] [0946689886.603944638] [amcl]: initialPoseReceived
+[component_container_isolated-13] [INFO] [0946689886.604334179] [amcl]: Setting pose (946689886.604318): 0.000 0.000 0.000
+[component_container_isolated-13] [INFO] [0946689886.610920309] [amcl]: Creating bond (amcl) to lifecycle manager.
+[component_container_isolated-13] [INFO] [0946689886.614834520] [amcl]: createLaserObject
+[component_container_isolated-13] [INFO] [0946689886.616341896] [nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_bt_navigator::BtNavigator>
+[component_container_isolated-13] [INFO] [0946689886.616504813] [nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_bt_navigator::BtNavigator>
+[component_container_isolated-13] [INFO] [0946689886.737239435] [lifecycle_manager_localization]: Server amcl connected with bond.
+[component_container_isolated-13] [INFO] [0946689886.737434185] [lifecycle_manager_localization]: [34m[1mManaged nodes are active[0m[0m
+[component_container_isolated-13] [INFO] [0946689886.737560769] [lifecycle_manager_localization]: [34m[1mCreating bond timer...[0m[0m
+[component_container_isolated-13] [INFO] [0946689886.748030401] [bt_navigator]: 
+[component_container_isolated-13] 	bt_navigator lifecycle node launched. 
+[component_container_isolated-13] 	Waiting on external lifecycle transitions to activate
+[component_container_isolated-13] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[component_container_isolated-13] [INFO] [0946689886.748489317] [bt_navigator]: Creating
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/bt_navigator' in container '/nav2_container'
+[component_container_isolated-13] [INFO] [0946689886.773686501] [nav2_container]: Load Library: /home/wheeltec/wheeltec_ros2/install/nav2_waypoint_follower/lib/libwaypoint_follower_core.so
+[component_container_isolated-13] [INFO] [0946689886.779852963] [nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_waypoint_follower::WaypointFollower>
+[component_container_isolated-13] [INFO] [0946689886.780009797] [nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_waypoint_follower::WaypointFollower>
+[component_container_isolated-13] [INFO] [0946689887.587522045] [waypoint_follower]: 
+[component_container_isolated-13] 	waypoint_follower lifecycle node launched. 
+[component_container_isolated-13] 	Waiting on external lifecycle transitions to activate
+[component_container_isolated-13] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[component_container_isolated-13] [INFO] [0946689887.606049974] [waypoint_follower]: Creating
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/waypoint_follower' in container '/nav2_container'
+[component_container_isolated-13] [INFO] [0946689887.651476296] [nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_lifecycle_manager::LifecycleManager>
+[component_container_isolated-13] [INFO] [0946689887.651683255] [nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_lifecycle_manager::LifecycleManager>
+[component_container_isolated-13] [INFO] [0946689887.858042476] [lifecycle_manager_navigation]: Creating
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/lifecycle_manager_navigation' in container '/nav2_container'
+[component_container_isolated-13] [INFO] [0946689887.886062078] [lifecycle_manager_navigation]: [34m[1mCreating and initializing lifecycle service clients[0m[0m
+[joint_state_publisher-4] [INFO] [0946689887.965476464] [joint_state_publisher]: Waiting for robot_description to be published on the robot_description topic...
+[component_container_isolated-13] [INFO] [0946689887.990538814] [lifecycle_manager_navigation]: [34m[1mStarting managed nodes bringup...[0m[0m
+[component_container_isolated-13] [INFO] [0946689887.990740065] [lifecycle_manager_navigation]: [34m[1mConfiguring controller_server[0m[0m
+[component_container_isolated-13] [INFO] [0946689887.992583232] [controller_server]: Configuring controller interface
+[component_container_isolated-13] [INFO] [0946689888.001266322] [controller_server]: getting goal checker plugins..
+[component_container_isolated-13] [INFO] [0946689888.011327578] [controller_server]: Controller frequency set to 20.0000Hz
+[component_container_isolated-13] [INFO] [0946689888.012413579] [local_costmap.local_costmap]: Configuring
+[component_container_isolated-13] [INFO] [0946689888.060507528] [local_costmap.local_costmap]: Using plugin "voxel_layer"
+[nav2_waypoint_cycle-1] Exception in thread Thread-1 (keyboard_listener):
+[nav2_waypoint_cycle-1] Traceback (most recent call last):
+[nav2_waypoint_cycle-1]   File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+[nav2_waypoint_cycle-1]     self.run()
+[nav2_waypoint_cycle-1]   File "/usr/lib/python3.10/threading.py", line 953, in run
+[nav2_waypoint_cycle-1]     self._target(*self._args, **self._kwargs)
+[nav2_waypoint_cycle-1]   File "/home/wheeltec/wheeltec_ros2/build/nav2_waypoint_cycle/nav2_waypoint_cycle/waypoint_cycle.py", line 32, in keyboard_listener
+[nav2_waypoint_cycle-1]     sys.stdin = open('/dev/tty','r')
+[nav2_waypoint_cycle-1] OSError: [Errno 6] No such device or address: '/dev/tty'
+[component_container_isolated-13] [INFO] [0946689888.095428885] [local_costmap.local_costmap]: Subscribed to Topics: scan scan2 depth_points
+[component_container_isolated-13] [INFO] [0946689888.224815388] [local_costmap.local_costmap]: Initialized plugin "voxel_layer"
+[component_container_isolated-13] [INFO] [0946689888.224966804] [local_costmap.local_costmap]: Using plugin "inflation_layer"
+[component_container_isolated-13] [INFO] [0946689888.234196102] [local_costmap.local_costmap]: Initialized plugin "inflation_layer"
+[component_container_isolated-13] [INFO] [0946689888.334806253] [controller_server]: Created progress_checker : progress_checker of type nav2_controller::SimpleProgressChecker
+[component_container_isolated-13] [INFO] [0946689888.344182468] [controller_server]: Created goal checker : goal_checker of type nav2_controller::SimpleGoalChecker
+[component_container_isolated-13] [INFO] [0946689888.350427222] [controller_server]: Controller Server has goal_checker  goal checkers available.
+[component_container_isolated-13] [INFO] [0946689888.358905311] [controller_server]: Created controller : FollowPath of type nav2_mppi_controller::MPPIController
+[component_container_isolated-13] [INFO] [0946689888.395379585] [controller_server]: Controller period is equal to model dt. Control sequence shifting is ON
+[component_container_isolated-13] [INFO] [0946689888.415361598] [controller_server]: ConstraintCritic instantiated with 1 power and 4.000000 weight.
+[component_container_isolated-13] [INFO] [0946689888.418541726] [controller_server]: Critic loaded : mppi::critics::ConstraintCritic
+[component_container_isolated-13] [INFO] [0946689888.440236532] [controller_server]: ObstaclesCritic instantiated with 1 power and 30.000000 / 1.500000 weights. Critic will collision check based on circular cost.
+[component_container_isolated-13] [INFO] [0946689888.440450324] [controller_server]: Critic loaded : mppi::critics::ObstaclesCritic
+[component_container_isolated-13] [INFO] [0946689888.449676455] [controller_server]: GoalCritic instantiated with 1 power and 15.000000 weight.
+[component_container_isolated-13] [INFO] [0946689888.449909455] [controller_server]: Critic loaded : mppi::critics::GoalCritic
+[component_container_isolated-13] [INFO] [0946689888.460676837] [controller_server]: GoalAngleCritic instantiated with 1 power, 3.000000 weight, and 0.500000 angular threshold.
+[component_container_isolated-13] [INFO] [0946689888.460881296] [controller_server]: Critic loaded : mppi::critics::GoalAngleCritic
+[component_container_isolated-13] [INFO] [0946689888.479673766] [controller_server]: ReferenceTrajectoryCritic instantiated with 1 power and 25.000000 weight
+[component_container_isolated-13] [INFO] [0946689888.479953767] [controller_server]: Critic loaded : mppi::critics::PathAlignCritic
+[component_container_isolated-13] [INFO] [0946689888.488476064] [controller_server]: Critic loaded : mppi::critics::PathFollowCritic
+[component_container_isolated-13] [INFO] [0946689888.506772660] [controller_server]: PathAngleCritic instantiated with 1 power and 4.000000 weight. Reversing not allowed.
+[component_container_isolated-13] [INFO] [0946689888.507184660] [controller_server]: Critic loaded : mppi::critics::PathAngleCritic
+[component_container_isolated-13] [INFO] [0946689888.520743711] [controller_server]: PreferForwardCritic instantiated with 1 power and 1.500000 weight.
+[component_container_isolated-13] [INFO] [0946689888.520995252] [controller_server]: Critic loaded : mppi::critics::PreferForwardCritic
+[component_container_isolated-13] [INFO] [0946689888.527619673] [controller_server]: Optimizer reset
+[component_container_isolated-13] [INFO] [0946689888.565755574] [MPPIController]: Configured MPPI Controller: FollowPath
+[component_container_isolated-13] [INFO] [0946689888.565913616] [controller_server]: Controller Server has FollowPath  controllers available.
+[component_container_isolated-13] [INFO] [0946689888.619546027] [lifecycle_manager_navigation]: [34m[1mConfiguring smoother_server[0m[0m
+[component_container_isolated-13] [INFO] [0946689888.620167819] [smoother_server]: Configuring smoother server
+[component_container_isolated-13] [INFO] [0946689888.666936433] [smoother_server]: Created smoother : simple_smoother of type nav2_smoother::SimpleSmoother
+[component_container_isolated-13] [INFO] [0946689888.675171230] [smoother_server]: Smoother Server has simple_smoother  smoothers available.
+[component_container_isolated-13] [INFO] [0946689888.717186217] [lifecycle_manager_navigation]: [34m[1mConfiguring planner_server[0m[0m
+[component_container_isolated-13] [INFO] [0946689888.717796926] [planner_server]: Configuring
+[component_container_isolated-13] [INFO] [0946689888.718039009] [global_costmap.global_costmap]: Configuring
+[component_container_isolated-13] [INFO] [0946689888.752113157] [global_costmap.global_costmap]: Using plugin "static_layer"
+[component_container_isolated-13] [INFO] [0946689888.763586415] [global_costmap.global_costmap]: Subscribing to the map topic (/map) with transient local durability
+[component_container_isolated-13] [INFO] [0946689888.770195252] [global_costmap.global_costmap]: Initialized plugin "static_layer"
+[component_container_isolated-13] [INFO] [0946689888.770366752] [global_costmap.global_costmap]: Using plugin "obstacle_layer"
+[component_container_isolated-13] [INFO] [0946689888.780359717] [global_costmap.global_costmap]: Subscribed to Topics: scan scan2
+[component_container_isolated-13] [INFO] [0946689888.843898968] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 708 X 260 at 0.050000 m/pix
+[component_container_isolated-13] [INFO] [0946689888.854675975] [global_costmap.global_costmap]: Initialized plugin "obstacle_layer"
+[component_container_isolated-13] [INFO] [0946689888.854826434] [global_costmap.global_costmap]: Using plugin "inflation_layer"
+[component_container_isolated-13] [INFO] [0946689888.865148399] [global_costmap.global_costmap]: Initialized plugin "inflation_layer"
+[component_container_isolated-13] [INFO] [0946689888.942016950] [planner_server]: Created global planner plugin GridBased of type nav2_smac_planner/SmacPlannerHybrid
+[component_container_isolated-13] [INFO] [0946689888.942230867] [planner_server]: Configuring GridBased of type SmacPlannerHybrid
+[component_container_isolated-13] [INFO] [0946689888.976203598] [planner_server]: Even sized heuristic lookup table size set 400.000000, increasing size by 1 to make odd
+[component_container_isolated-13] [INFO] [0946689970.261987228] [planner_server]: Configured plugin GridBased of type SmacPlannerHybrid with maximum iterations 1000000, max on approach iterations 1000, and not allowing unknown traversal. Tolerance 0.25.Using motion model: Reeds-Shepp.
+[component_container_isolated-13] [INFO] [0946689970.262317728] [planner_server]: Planner Server has GridBased  planners available.
+[component_container_isolated-13] [INFO] [0946689970.334339109] [lifecycle_manager_navigation]: [34m[1mConfiguring behavior_server[0m[0m
+[component_container_isolated-13] [INFO] [0946689970.334892485] [behavior_server]: Configuring
+[component_container_isolated-13] [INFO] [0946689970.374527428] [behavior_server]: Creating behavior plugin spin of type nav2_behaviors/Spin
+[component_container_isolated-13] [INFO] [0946689970.381534974] [behavior_server]: Configuring spin
+[component_container_isolated-13] [INFO] [0946689970.484282626] [behavior_server]: Creating behavior plugin backup of type nav2_behaviors/BackUp
+[component_container_isolated-13] [INFO] [0946689970.490346839] [behavior_server]: Configuring backup
+[component_container_isolated-13] [INFO] [0946689970.627888805] [behavior_server]: Creating behavior plugin drive_on_heading of type nav2_behaviors/DriveOnHeading
+[component_container_isolated-13] [INFO] [0946689970.634176893] [behavior_server]: Configuring drive_on_heading
+[component_container_isolated-13] [INFO] [0946689970.749293262] [behavior_server]: Creating behavior plugin wait of type nav2_behaviors/Wait
+[component_container_isolated-13] [INFO] [0946689970.756089350] [behavior_server]: Configuring wait
+[component_container_isolated-13] [INFO] [0946689970.985345544] [lifecycle_manager_navigation]: [34m[1mConfiguring bt_navigator[0m[0m
+[component_container_isolated-13] [INFO] [0946689970.985861420] [bt_navigator]: Configuring
+[component_container_isolated-13] [INFO] [0946689971.834038195] [lifecycle_manager_navigation]: [34m[1mConfiguring waypoint_follower[0m[0m
+[component_container_isolated-13] [INFO] [0946689971.835187154] [waypoint_follower]: Configuring
+[component_container_isolated-13] [INFO] [0946689971.985618671] [waypoint_follower]: Created waypoint_task_executor : wait_at_waypoint of type nav2_waypoint_follower::WaitAtWaypoint
+[component_container_isolated-13] [INFO] [0946689971.991228134] [lifecycle_manager_navigation]: [34m[1mActivating controller_server[0m[0m
+[component_container_isolated-13] [INFO] [0946689971.991784759] [controller_server]: Activating
+[component_container_isolated-13] [INFO] [0946689971.992019134] [local_costmap.local_costmap]: Activating
+[component_container_isolated-13] [INFO] [0946689971.992117342] [local_costmap.local_costmap]: Checking transform
+[component_container_isolated-13] [INFO] [0946689971.992504384] [local_costmap.local_costmap]: start
+[component_container_isolated-13] [WARN] [0946689972.212634157] [controller_server]: Parameter controller_server.verbose not found
+[component_container_isolated-13] [INFO] [0946689972.217452743] [controller_server]: Optimizer reset
+[component_container_isolated-13] [INFO] [0946689972.220390662] [MPPIController]: Activated MPPI Controller: FollowPath
+[component_container_isolated-13] [INFO] [0946689972.220735495] [controller_server]: Creating bond (controller_server) to lifecycle manager.
+[component_container_isolated-13] [INFO] [0946689972.340271575] [lifecycle_manager_navigation]: Server controller_server connected with bond.
+[component_container_isolated-13] [INFO] [0946689972.340508617] [lifecycle_manager_navigation]: [34m[1mActivating smoother_server[0m[0m
+[component_container_isolated-13] [INFO] [0946689972.341361118] [smoother_server]: Activating
+[component_container_isolated-13] [INFO] [0946689972.341578951] [smoother_server]: Creating bond (smoother_server) to lifecycle manager.
+[component_container_isolated-13] [INFO] [0946689972.469279036] [lifecycle_manager_navigation]: Server smoother_server connected with bond.
+[component_container_isolated-13] [INFO] [0946689972.469482620] [lifecycle_manager_navigation]: [34m[1mActivating planner_server[0m[0m
+[component_container_isolated-13] [INFO] [0946689972.470554454] [planner_server]: Activating
+[component_container_isolated-13] [INFO] [0946689972.470895204] [global_costmap.global_costmap]: Activating
+[component_container_isolated-13] [INFO] [0946689972.471023663] [global_costmap.global_costmap]: Checking transform
+[component_container_isolated-13] [INFO] [0946689972.471588163] [global_costmap.global_costmap]: start
+[component_container_isolated-13] [INFO] [0946689973.534598249] [planner_server]: Activating plugin GridBased of type SmacPlannerHybrid
+[component_container_isolated-13] [INFO] [0946689973.547474007] [planner_server]: Creating bond (planner_server) to lifecycle manager.
+[component_container_isolated-13] [INFO] [0946689973.674458175] [lifecycle_manager_navigation]: Server planner_server connected with bond.
+[component_container_isolated-13] [INFO] [0946689973.674659009] [lifecycle_manager_navigation]: [34m[1mActivating behavior_server[0m[0m
+[component_container_isolated-13] [INFO] [0946689973.675820051] [behavior_server]: Activating
+[component_container_isolated-13] [INFO] [0946689973.675952760] [behavior_server]: Activating spin
+[component_container_isolated-13] [INFO] [0946689973.676158427] [behavior_server]: Activating backup
+[component_container_isolated-13] [INFO] [0946689973.676301968] [behavior_server]: Activating drive_on_heading
+[component_container_isolated-13] [INFO] [0946689973.676426510] [behavior_server]: Activating wait
+[component_container_isolated-13] [INFO] [0946689973.676568260] [behavior_server]: Creating bond (behavior_server) to lifecycle manager.
+[component_container_isolated-13] [INFO] [0946689973.803902304] [lifecycle_manager_navigation]: Server behavior_server connected with bond.
+[component_container_isolated-13] [INFO] [0946689973.804045429] [lifecycle_manager_navigation]: [34m[1mActivating bt_navigator[0m[0m
+[component_container_isolated-13] [INFO] [0946689973.805048221] [bt_navigator]: Activating
+[component_container_isolated-13] [INFO] [0946689974.417863089] [bt_navigator]: Creating bond (bt_navigator) to lifecycle manager.
+[component_container_isolated-13] [INFO] [0946689974.564019312] [lifecycle_manager_navigation]: Server bt_navigator connected with bond.
+[component_container_isolated-13] [INFO] [0946689974.564164853] [lifecycle_manager_navigation]: [34m[1mActivating waypoint_follower[0m[0m
+[component_container_isolated-13] [INFO] [0946689974.565212729] [waypoint_follower]: Activating
+[component_container_isolated-13] [INFO] [0946689974.565428604] [waypoint_follower]: Creating bond (waypoint_follower) to lifecycle manager.
+[component_container_isolated-13] [INFO] [0946689974.694985899] [lifecycle_manager_navigation]: Server waypoint_follower connected with bond.
+[component_container_isolated-13] [INFO] [0946689974.695731900] [lifecycle_manager_navigation]: [34m[1mManaged nodes are active[0m[0m
+[component_container_isolated-13] [INFO] [0946689974.695800775] [lifecycle_manager_navigation]: [34m[1mCreating bond timer...[0m[0m
+[component_container_isolated-13] [INFO] [0946690008.238373156] [global_costmap.global_costmap]: Message Filter dropping message: frame 'laser' at time 946690007.936 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[component_container_isolated-13] [INFO] [0946690008.238373406] [local_costmap.local_costmap]: Message Filter dropping message: frame 'laser' at time 946690007.936 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[component_container_isolated-13] [INFO] [0946690008.339889265] [global_costmap.global_costmap]: Message Filter dropping message: frame 'laser' at time 946690008.036 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[component_container_isolated-13] [INFO] [0946690008.339889348] [local_costmap.local_costmap]: Message Filter dropping message: frame 'laser' at time 946690008.036 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[component_container_isolated-13] [INFO] [0946690010.040304068] [bt_navigator]: Begin navigating from current location to (3.00, 0.00)
+[component_container_isolated-13] [INFO] [0946690010.073152090] [controller_server]: Received a goal, begin computing control effort.
+[component_container_isolated-13] [WARN] [0946690010.073400924] [controller_server]: No goal checker was specified in parameter 'current_goal_checker'. Server will use only plugin loaded goal_checker . This warning will appear once.
+[component_container_isolated-13] [INFO] [0946690010.078999344] [controller_server]: Optimizer reset
+[component_container_isolated-13] [WARN] [0946690010.156639146] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690010.210707182] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690010.263639968] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690010.316805545] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690010.369524788] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690010.422133990] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690010.474899442] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690010.629075879] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690010.683448415] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690010.751391544] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690010.806080122] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690010.860127408] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690010.918185447] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690010.971858066] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690011.024682976] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690011.077331720] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690011.230128780] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690011.282858191] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690011.335256351] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690011.387942303] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690011.440413088] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690011.492946748] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690011.545684033] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690011.610669951] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690011.675625662] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690011.728313113] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690011.881113216] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690011.933781334] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690011.986458244] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690012.039034571] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690012.091964107] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690012.144908142] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690012.197594219] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690012.250699713] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690012.303573081] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690012.356179075] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690012.408813402] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690012.461424937] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690012.525958480] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690012.590259231] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690012.742939792] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690012.795518535] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690012.848085362] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690012.900646897] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690012.953166849] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690013.017067975] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690013.069873385] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690013.122649129] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690013.175453039] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690013.228057491] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690013.280510693] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690013.333027728] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690013.385810930] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690013.438462798] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690013.491178709] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690013.643758602] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690013.696346096] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690013.749007714] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690013.813153465] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690013.865976042] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690013.918849161] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690013.971451738] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690014.024371773] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690014.077124767] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690014.129824760] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690014.182475587] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690014.235073789] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690014.290790243] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690014.344188154] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690014.497486423] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690014.550268250] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690014.603691369] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690014.656543404] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690014.720761030] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690014.784783532] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690014.848964991] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690015.002411844] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690015.055143504] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690015.108051456] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690015.160833075] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690015.225519535] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690015.278101361] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690015.330918563] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690015.383603265] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690015.436397051] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690015.489156669] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690015.541876454] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690015.594567990] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690015.647335692] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690015.699946768] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690015.852604370] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690015.905521281] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690016.022797984] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690016.175515836] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690016.228225413] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690016.280841532] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690016.333519817] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690016.386181685] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690016.438823971] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690016.491612964] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690016.544436083] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690016.597066243] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690016.649975237] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690016.702833689] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690016.755605182] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690016.808466218] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690016.861397295] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690016.938467180] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690017.091172240] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690017.143814942] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [INFO] [0946690017.143963109] [controller_server]: Passing new path to controller.
+[component_container_isolated-13] [WARN] [0946690017.272207319] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690017.424874505] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690017.477587665] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690017.529949492] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690017.582692902] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690017.635240062] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690017.687742556] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690017.740276299] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690017.792812126] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690017.845465536] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690017.898118696] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690017.950881231] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690018.003720767] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690018.056206718] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690018.120950720] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690018.185829430] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690018.338274657] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690018.390700150] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690018.443267561] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690018.495858012] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690018.548505089] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690018.601159416] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690018.653716493] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690018.706384070] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690018.759060522] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690018.811677474] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690018.864416550] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690018.916972044] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690018.969499496] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690019.034535247] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690019.087047949] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690019.239463718] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690019.292042086] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690019.344627621] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690019.397128532] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690019.449564192] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690019.502269185] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690019.554820970] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690019.607400755] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690019.660158624] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690019.712864576] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690019.765710445] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690019.818490605] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690019.883903899] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690019.948980025] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690020.101436627] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690020.154048454] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690020.206427031] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690020.258973774] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690020.311511559] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690020.364045970] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690020.429029888] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690020.481350048] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690020.533886500] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690020.586303910] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690020.638811737] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690020.691410313] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690020.744018599] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690020.809097475] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690020.974368961] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690021.039350879] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690021.104547881] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690021.169529841] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690021.334684493] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690021.399738537] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690021.464974747] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690021.529995707] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690021.695124109] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690021.760149528] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690021.825465488] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690021.890496365] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690022.055687892] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690022.120758227] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690022.185781562] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690022.250984023] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690022.416350716] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690022.483819845] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690022.551562099] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690022.718846544] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690022.786349630] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690022.853846092] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690023.021424746] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690023.086633706] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690023.151541500] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690023.217036127] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690023.382073070] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690023.447055697] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [INFO] [0946690023.447209656] [controller_server]: Passing new path to controller.
+[component_container_isolated-13] [WARN] [0946690023.512580908] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690023.577630993] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690023.742625561] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690023.807748522] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690023.872733398] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690023.937549317] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690024.102666760] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690024.168041137] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690024.232949764] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690024.297920891] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690024.465781461] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690024.531055963] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690024.596032465] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690024.660802259] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690024.826065702] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690024.890818204] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690024.956044539] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690025.021055958] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690025.186645527] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690025.254382489] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690025.321006241] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690025.386672910] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690025.552259438] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690025.617844773] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690025.683252734] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690025.749684195] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690025.914464097] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690025.979243973] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690026.044190267] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690026.109278185] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690026.274221879] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690026.340724631] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690026.406179592] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690026.472365011] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690026.637739372] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690026.705860292] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690026.773590754] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690026.940105074] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690027.006587910] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690027.073940913] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690027.242609734] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690027.311030447] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690027.379230326] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690027.546559854] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690027.614376108] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690027.681981986] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690027.849583098] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690027.917121144] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690027.984424480] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690028.154600302] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690028.224960391] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690028.293930520] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [INFO] [0946690028.463897051] [controller_server]: Reached the goal!
+[component_container_isolated-13] [INFO] [0946690028.498241615] [bt_navigator]: Goal succeeded
+[component_container_isolated-13] [INFO] [0946690379.831095139] [bt_navigator]: Begin navigating from current location to (5.00, 0.00)
+[component_container_isolated-13] [INFO] [0946690379.862627285] [controller_server]: Received a goal, begin computing control effort.
+[component_container_isolated-13] [INFO] [0946690379.863548744] [controller_server]: Optimizer reset
+[component_container_isolated-13] [WARN] [0946690379.947224717] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690380.003618713] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690380.058394875] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690380.113853495] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690380.267800181] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690380.321588551] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690380.375278545] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690380.435309668] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690380.488696579] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690380.542610615] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690380.595553484] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690380.648613561] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690380.701485805] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690380.756230716] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690380.809833835] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690380.862953329] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690380.916177198] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690381.068966134] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690381.121962086] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690381.175178288] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690381.228213573] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690381.280735858] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690381.333981352] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690381.386625721] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690381.439768756] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690381.492424500] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690381.545533452] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690381.598461321] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690381.651800273] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690381.705095600] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690381.758652053] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690381.812480172] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690381.867300542] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690382.020595395] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690382.073197972] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690382.126180424] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690382.178838625] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690382.232158078] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690382.284979446] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690382.338297024] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690382.390964851] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690382.444156261] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690382.496776338] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690382.549969874] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690382.602475950] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690382.656648487] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690382.709742564] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690382.763113724] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690382.816759427] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690382.869865087] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690383.023877315] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690383.077800101] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690383.131589721] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690383.196411056] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690383.249796216] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690383.302454418] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690383.355521495] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690383.408569198] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690383.461648191] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690383.514173226] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690383.567443345] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690383.632762972] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690383.785379741] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690383.838587693] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690383.891593187] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690383.944786098] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690383.997453966] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690384.050551002] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690384.116233046] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690384.181888839] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690384.247495758] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690384.400256569] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690384.453148646] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690384.505964014] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690384.559439217] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690384.612406044] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690384.665566121] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690384.718890365] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690384.771598775] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690384.824823103] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690384.877521804] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690384.930632840] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690384.995975592] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690385.061650303] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690385.227466413] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690385.280214782] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690385.333644068] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690385.386290853] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690385.439413805] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690385.492016049] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690385.545500793] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690385.598126536] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690385.652388822] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690385.705288316] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690385.759148186] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690385.812466179] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690385.978651166] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690386.044541126] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690386.109855128] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690386.175597339] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690386.341240283] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690386.406777618] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690386.472808246] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690386.538430831] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690386.703780525] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690386.770713778] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690386.836458614] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690386.901984699] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690387.067639060] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690387.133260896] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690387.198827773] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690387.264582109] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [INFO] [0946690387.264725025] [controller_server]: Passing new path to controller.
+[component_container_isolated-13] [WARN] [0946690387.430372553] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690387.495600596] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690387.561307224] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690387.627432768] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690387.792730878] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690387.858913797] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690387.924807383] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690387.990363385] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690388.156147871] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690388.222222915] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690388.287636292] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690388.353661878] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690388.519393947] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690388.584957574] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690388.651811953] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690388.717881247] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690388.883207982] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690388.948963776] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690389.014521070] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690389.082036157] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690389.247606434] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690389.312490019] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690389.378121605] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690389.444132315] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690389.609536468] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690389.674619553] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690389.739763555] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690389.804753848] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690389.969811959] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690390.034887044] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690390.100031629] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690390.165504673] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690390.330533991] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690390.395506285] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690390.460522037] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690390.525709414] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690390.690693315] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690390.755695109] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690390.820706902] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690390.885721654] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690391.050736598] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690391.115855141] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690391.180874310] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690391.245881812] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690391.411709506] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690391.477012424] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690391.541985718] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690391.606906095] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690391.771853163] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690391.836703290] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690391.901589708] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690391.966443585] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690392.131377279] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690392.196235864] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690392.261099574] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690392.325933825] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690392.490868102] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690392.555759437] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690392.620553189] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690392.685272315] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690392.850120717] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690392.914928927] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690392.979947471] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690393.046803182] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690393.213629585] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690393.280662047] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690393.347272050] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690393.514016744] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690393.581265581] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690393.648051001] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690393.814707570] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690393.881357823] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690393.948100535] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690394.114875521] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690394.181783899] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [INFO] [0946690394.181941108] [controller_server]: Passing new path to controller.
+[component_container_isolated-13] [WARN] [0946690394.248955944] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690394.415859014] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690394.482557434] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690394.549388562] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690394.716466340] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690394.783293343] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690394.849893221] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690395.016886082] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690395.083656294] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690395.150384838] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690395.317296700] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690395.384083120] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690395.450913164] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690395.617783234] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690395.684644195] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690395.751439240] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690395.918346643] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690395.985211063] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690396.052007024] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690396.219005428] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690396.285726514] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690396.352353100] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690396.519289087] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690396.586119340] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690396.652844301] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690396.819936121] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690396.886587749] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690396.953486710] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690397.120513447] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690397.187249408] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690397.253991120] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690397.420893814] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690397.487863109] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690397.554720862] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690397.721914724] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690397.788827352] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690397.855853480] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690398.022796925] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690398.089744095] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690398.156693390] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690398.323609460] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690398.390461963] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690398.457606216] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690398.624603786] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690398.691552456] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690398.759133209] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690398.926539404] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690398.993373782] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690399.060332535] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690399.227431272] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690399.294278317] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690399.365729615] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690399.532919810] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690399.600389438] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690399.667543650] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690399.834931220] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690399.902227098] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690399.969218018] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690400.136059838] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690400.203006841] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690400.269992552] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690400.437086997] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690400.504325334] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690400.571505421] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690400.738564366] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690400.805503369] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690400.872428747] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690401.039418108] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690401.106473778] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690401.173551573] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690401.340656143] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690401.407699646] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690401.474719358] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690401.641917511] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690401.709040431] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690401.776128476] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690401.943146212] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690402.010200799] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690402.077260844] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690402.244572789] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690402.311562750] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690402.378637712] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690402.545837324] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690402.612699368] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690402.679930538] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690402.847009025] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690402.913992153] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690402.981131323] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690403.148091851] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690403.215202063] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690403.282326608] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690403.449367761] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690403.516568389] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690403.583626351] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690403.750716004] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690403.818472924] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690403.885527428] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690404.052391747] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690404.119332209] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [WARN] [0946690404.186276295] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-13] [ERROR] [0946690404.186681421] [controller_server]: Failed to make progress
+[component_container_isolated-13] [WARN] [0946690404.187111921] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[component_container_isolated-13] [ERROR] [0946690404.221478652] [bt_navigator]: Goal failed
+[component_container_isolated-13] [WARN] [0946690404.221905569] [bt_navigator]: [navigate_to_pose] [ActionServer] Aborting handle.

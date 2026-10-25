@@ -1,0 +1,216 @@
+{
+  "server_time": "2000-01-01T10:14:04+0800",
+  "server_uptime_s": 2.7,
+  "camera": {
+    "online": true,
+    "topic": "/camera/color/image_raw",
+    "fps": 27.68,
+    "width": 768,
+    "height": 576,
+    "frame_age_ms": 29.7
+  },
+  "detector": {
+    "online": true,
+    "topic": "/evi/detections",
+    "fps": 32.23,
+    "count": 13,
+    "preprocess_ms": 14.261,
+    "infer_ms": 6.131,
+    "decode_ms": 3.752,
+    "total_ms": 24.146
+  },
+  "tracker": {
+    "online": true,
+    "mode": "motion_iou",
+    "active_tracks": 13
+  },
+  "system": {
+    "ddr_temp_c": 49.7,
+    "bpu_temp_c": 48.3,
+    "cpu_temp_c": 48.7,
+    "bpu_ratio": 9.0,
+    "bpu_freq_mhz": 1000,
+    "ddr_freq_mhz": 4266,
+    "gpu_freq_mhz": 1000,
+    "mem_used_mb": 954,
+    "mem_total_mb": 7080,
+    "uptime_s": 8038.6,
+    "cpu_ratio": 27.01,
+    "cpu_count": 8
+  },
+  "detections": [
+    {
+      "class_id": 0,
+      "label": "person",
+      "score": 0.70361,
+      "bbox": [
+        688.83,
+        234.2,
+        720.54,
+        329.09
+      ],
+      "track_id": 1
+    },
+    {
+      "class_id": 0,
+      "label": "person",
+      "score": 0.69269,
+      "bbox": [
+        517.35,
+        191.05,
+        554.09,
+        282.11
+      ],
+      "track_id": 19
+    },
+    {
+      "class_id": 0,
+      "label": "person",
+      "score": 0.64992,
+      "bbox": [
+        552.6,
+        162.39,
+        582.13,
+        237.95
+      ],
+      "track_id": 18
+    },
+    {
+      "class_id": 0,
+      "label": "person",
+      "score": 0.62936,
+      "bbox": [
+        256.16,
+        192.4,
+        282.26,
+        255.87
+      ],
+      "track_id": 14
+    },
+    {
+      "class_id": 0,
+      "label": "person",
+      "score": 0.59551,
+      "bbox": [
+        717.54,
+        235.46,
+        748.52,
+        328.3
+      ],
+      "track_id": 5
+    },
+    {
+      "class_id": 0,
+      "label": "person",
+      "score": 0.57518,
+      "bbox": [
+        462.01,
+        164.66,
+        492.62,
+        238.56
+      ],
+      "track_id": 22
+    },
+    {
+      "class_id": 0,
+      "label": "person",
+      "score": 0.57344,
+      "bbox": [
+        48.15,
+        132.29,
+        62.86,
+        175.89
+      ],
+      "track_id": 4
+    },
+    {
+      "class_id": 0,
+      "label": "person",
+      "score": 0.56301,
+      "bbox": [
+        -36.74,
+        164.01,
+        -8.44,
+        229.55
+      ],
+      "track_id": 16
+    },
+    {
+      "class_id": 0,
+      "label": "person",
+      "score": 0.53571,
+      "bbox": [
+        179.48,
+        145.58,
+        202.98,
+        199.44
+      ],
+      "track_id": 17
+    },
+    {
+      "class_id": 7,
+      "label": "truck",
+      "score": 0.5214,
+      "bbox": [
+        651.12,
+        43.53,
+        724.48,
+        100.48
+      ],
+      "track_id": 8
+    },
+    {
+      "class_id": 0,
+      "label": "person",
+      "score": 0.51988,
+      "bbox": [
+        400.22,
+        173.42,
+        426.34,
+        245.32
+      ],
+      "track_id": 21
+    },
+    {
+      "class_id": 2,
+      "label": "car",
+      "score": 0.4914,
+      "bbox": [
+        733.77,
+        48.57,
+        767.77,
+        94.95
+      ],
+      "track_id": 7
+    },
+    {
+      "class_id": 0,
+      "label": "person",
+      "score": 0.32533,
+      "bbox": [
+        417.44,
+        240.43,
+        449.43,
+        328.89
+      ],
+      "track_id": 20
+    }
+  ],
+  "events": [
+    {
+      "time": "T+00:02",
+      "level": "info",
+      "message": "检测器结果已连接"
+    },
+    {
+      "time": "T+00:02",
+      "level": "info",
+      "message": "相机图像已连接"
+    },
+    {
+      "time": "T+00:00",
+      "level": "info",
+      "message": "上位机代理已启动"
+    }
+  ]
+}

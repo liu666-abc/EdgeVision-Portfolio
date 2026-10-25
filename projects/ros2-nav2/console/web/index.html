@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>EVI Nav2 Mission Console</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="console-shell">
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9M7.8 16.2a6 6 0 0 1 0-8.5M12 12h.01M16.2 7.8a6 6 0 0 1 0 8.5M19.1 4.9C23 8.8 23 15.2 19.1 19.1"/></svg>
+        </span>
+        <div class="brand-copy">
+          <strong>EVI MISSION CONTROL</strong>
+          <span>NAV2 / LOCALIZATION / MAPPING</span>
+        </div>
+      </div>
+
+      <div class="topbar-status" aria-label="系统状态">
+        <span class="status-pill" id="wsPill"><i></i><b>WS</b><em>CONNECTING</em></span>
+        <span class="status-pill" id="rosPill"><i></i><b>ROS</b><em>WAITING</em></span>
+        <span class="status-pill" id="navPill"><i></i><b>NAV</b><em>IDLE</em></span>
+        <span class="frame-pill">FRAME <b id="frameLabel">map</b></span>
+      </div>
+
+      <div class="topbar-right">
+        <button class="icon-button" id="helpButton" type="button" aria-label="打开使用说明" title="使用说明">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.6 9a2.5 2.5 0 0 1 4.8 1c0 1.7-2.4 2-2.4 3.6M12 17h.01"/></svg>
+        </button>
+        <button class="icon-button" id="fullscreenButton" type="button" aria-label="全屏控制台" title="全屏控制台">
+          <svg viewBox="0 0 24 24"><path d="M8 3H3v5M16 3h5v5M8 21H3v-5M21 16v5h-5"/></svg>
+        </button>
+        <div class="clock">
+          <span id="clockDate">--/--</span>
+          <strong id="clockTime">--:--:--</strong>
+        </div>
+      </div>
+    </header>
+
+    <main class="workspace">
+      <nav class="toolrail" aria-label="地图工具">
+        <button class="tool-button is-active" id="panTool" type="button" data-tool="pan" aria-pressed="true" aria-label="平移地图" title="平移地图">
+          <svg viewBox="0 0 24 24"><path d="M18 11V6a2 2 0 0 0-4 0v5M14 10V4a2 2 0 0 0-4 0v6M10 10.5V6a2 2 0 0 0-4 0v8M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.9-6-2.4L1.5 14.1a2.1 2.1 0 0 1 3-3L6 12.5"/></svg>
+        </button>
+        <button class="tool-button" id="goalTool" type="button" data-tool="goal" aria-pressed="false" aria-label="选择导航目标" title="选择导航目标">
+          <svg viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+        </button>
+        <button class="tool-button" id="initialTool" type="button" data-tool="initial" aria-pressed="false" aria-label="设置初始位姿" title="设置初始位姿">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/><circle cx="12" cy="12" r="2"/></svg>
+        </button>
+        <span class="tool-separator"></span>
+        <button class="tool-button" id="fitTool" type="button" aria-label="适应地图" title="适应地图">
+          <svg viewBox="0 0 24 24"><path d="M8 3H3v5M16 3h5v5M8 21H3v-5M21 16v5h-5"/><path d="m9 9 6 6M15 9l-6 6"/></svg>
+        </button>
+        <button class="tool-button" id="centerTool" type="button" aria-label="跟随机器人" title="跟随机器人">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/></svg>
+        </button>
+        <span class="tool-separator"></span>
+        <button class="tool-button" id="cancelGoalTool" type="button" aria-label="取消导航目标" title="取消导航目标">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m9 9 6 6M15 9l-6 6"/></svg>
+        </button>
+      </nav>
+
+      <section class="map-panel" aria-label="Nav2 地图">
+        <div class="map-heading">
+          <div>
+            <span class="eyebrow">MAP / NAVIGATION</span>
+            <strong>全局地图与实时态势</strong>
+          </div>
+          <div class="map-heading-stats">
+            <span>POSE <b id="poseAge">--</b></span>
+            <span>SCAN <b id="scanAge">--</b></span>
+            <span>MAP <b id="mapAge">--</b></span>
+          </div>
+        </div>
+
+        <div class="operation-strip" id="operationBanner">
+          <span><b>当前模式</b> 正在检查 ROS2 状态</span>
+          <button id="inlineHelpButton" type="button">查看使用说明</button>
+        </div>
+
+        <div class="map-stage" id="mapStage">
+          <canvas id="mapCanvas" aria-label="Nav2 occupancy grid 地图"></canvas>
+
+          <div class="map-float map-float-left">
+            <span class="coordinate-readout" id="cursorReadout">X -- / Y --</span>
+            <span class="zoom-readout" id="zoomReadout">-- px/m</span>
+          </div>
+
+          <div class="map-float map-float-right">
+            <label class="layer-toggle"><input id="layerMap" type="checkbox" checked><span>MAP</span></label>
+            <label class="layer-toggle"><input id="layerScan" type="checkbox" checked><span>SCAN</span></label>
+            <label class="layer-toggle"><input id="layerPaths" type="checkbox" checked><span>PATHS</span></label>
+            <label class="layer-toggle"><input id="layerFootprint" type="checkbox" checked><span>ROBOT</span></label>
+          </div>
+
+          <div class="map-legend">
+            <span><i class="legend-free"></i>FREE</span>
+            <span><i class="legend-occupied"></i>OCCUPIED</span>
+            <span><i class="legend-scan"></i>SCAN</span>
+            <span><i class="legend-global"></i>GLOBAL</span>
+            <span><i class="legend-local"></i>LOCAL</span>
+          </div>
+
+          <div class="raw-scan-panel is-hidden" id="rawScanPanel">
+            <canvas id="rawScanCanvas" width="150" height="150"></canvas>
+            <span>RAW LIDAR / <b id="rawScanFrame">laser</b></span>
+          </div>
+
+          <div class="map-empty" id="mapEmpty">
+            <span class="map-empty-grid"></span>
+            <strong>等待 /map</strong>
+            <small>连接 ROS2 地图后自动适配视野</small>
+          </div>
+        </div>
+      </section>
+
+      <aside class="control-panel" aria-label="任务控制">
+        <section class="control-section quick-mode-section">
+          <div class="section-title"><span>QUICK MODE</span><b id="quickModeState">STANDBY</b></div>
+          <div class="quick-mode-grid">
+            <button class="mode-button" id="quickMappingButton" type="button">
+              <svg viewBox="0 0 24 24"><path d="m3 6 6-3 6 3 6-3v15l-6 3-6-3-6 3V6Z"/><path d="M9 3v15M15 6v15"/></svg>
+              <span>建图模式<small>启动底盘、雷达和 SLAM</small></span>
+            </button>
+            <button class="mode-button" id="quickNavigationButton" type="button">
+              <svg viewBox="0 0 24 24"><path d="m3 11 18-8-8 18-2-8-8-2Z"/></svg>
+              <span>导航模式<small>启动地图、AMCL 和 Nav2</small></span>
+            </button>
+            <button class="mode-button mode-button-stop" id="quickStopButton" type="button">
+              <svg viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12"/></svg>
+              <span>安全停止<small>零速、取消目标、停止栈</small></span>
+            </button>
+          </div>
+          <p class="quick-mode-help" id="quickModeHelp">先勾选安全确认，再选择建图模式或导航模式。</p>
+        </section>
+
+        <section class="control-section mission-section">
+          <div class="section-title">
+            <span>NAVIGATION TARGET</span>
+            <b id="missionMode">IDLE</b>
+          </div>
+          <div class="coordinate-fields">
+            <label><span>X / m</span><input id="targetX" type="number" step="0.01" value="0"></label>
+            <label><span>Y / m</span><input id="targetY" type="number" step="0.01" value="0"></label>
+            <label><span>YAW / °</span><input id="targetYaw" type="number" step="1" value="0"></label>
+          </div>
+          <div class="target-actions">
+            <button class="primary-button" id="sendGoalButton" type="button" disabled>
+              <svg viewBox="0 0 24 24"><path d="M3 11 21 3l-8 18-2-8-8-2Z"/></svg>
+              发送导航目标
+            </button>
+            <button class="secondary-button" id="sendInitialButton" type="button">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg>
+              设为初始位姿
+            </button>
+          </div>
+          <label class="safety-check">
+            <input id="safetyConfirm" type="checkbox">
+            <span>场地已清空，手在电机开关旁</span>
+          </label>
+        </section>
+
+        <section class="control-section localization-section">
+          <div class="section-title"><span>LOCALIZATION</span><b id="localizationQuality">WAITING</b></div>
+          <div class="localization-actions">
+            <button class="secondary-button" id="originPresetButton" type="button">
+              <svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18"/><circle cx="12" cy="12" r="3"/></svg>
+              A4 起点 0,0,0
+            </button>
+            <button class="secondary-button" id="readPoseButton" type="button">
+              <svg viewBox="0 0 24 24"><path d="M4 7V4h3M17 4h3v3M20 17v3h-3M7 20H4v-3"/><circle cx="12" cy="12" r="3"/></svg>
+              读取当前位姿
+            </button>
+          </div>
+          <div class="nudge-grid" aria-label="初始位姿微调">
+            <button type="button" data-nudge="x-">X −0.05</button>
+            <button type="button" data-nudge="x+">X +0.05</button>
+            <button type="button" data-nudge="y-">Y −0.05</button>
+            <button type="button" data-nudge="y+">Y +0.05</button>
+            <button type="button" data-nudge="yaw-">Yaw −5°</button>
+            <button type="button" data-nudge="yaw+">Yaw +5°</button>
+          </div>
+          <label class="coarse-check">
+            <input id="coarseInitial" type="checkbox">
+            <span>粗略初值：使用更大位置/朝向协方差</span>
+          </label>
+          <div class="localization-actions">
+            <button class="secondary-button" id="globalLocalizeButton" type="button">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+              全局重定位
+            </button>
+            <button class="secondary-button" id="nomotionUpdateButton" type="button">
+              <svg viewBox="0 0 24 24"><path d="M20 12a8 8 0 1 1-2.34-5.66"/><path d="M20 4v6h-6"/></svg>
+              静止更新
+            </button>
+          </div>
+        </section>
+
+        <section class="control-section manual-drive-section is-disabled" id="manualDriveSection">
+          <div class="section-title"><span>MANUAL DRIVE</span><b id="manualDriveState">LOCKED</b></div>
+          <label class="drive-speed">
+            <span>低速 <b id="driveSpeedValue">0.08 m/s</b></span>
+            <input id="driveSpeed" type="range" min="0.03" max="0.12" step="0.01" value="0.08">
+          </label>
+          <div class="drive-pad">
+            <button class="drive-key drive-forward" type="button" data-drive="forward" aria-label="前进" title="按住前进">
+              <svg viewBox="0 0 24 24"><path d="m6 14 6-6 6 6"/></svg>
+            </button>
+            <button class="drive-key drive-left" type="button" data-drive="left" aria-label="左转前进" title="按住左转前进">
+              <svg viewBox="0 0 24 24"><path d="m14 6-6 6 6 6"/></svg>
+            </button>
+            <button class="drive-key drive-stop" type="button" data-drive="stop" aria-label="立即停车" title="立即停车">
+              <svg viewBox="0 0 24 24"><rect x="7" y="7" width="10" height="10"/></svg>
+            </button>
+            <button class="drive-key drive-right" type="button" data-drive="right" aria-label="右转前进" title="按住右转前进">
+              <svg viewBox="0 0 24 24"><path d="m10 6 6 6-6 6"/></svg>
+            </button>
+          </div>
+          <p>按住方向键移动，松开或离开页面会自动发零速。</p>
+        </section>
+
+        <section class="control-section">
+          <div class="section-title"><span>MISSION STATUS</span><b id="goalResult">--</b></div>
+          <div class="progress-track"><span id="goalProgress"></span></div>
+          <div class="metric-list">
+            <div><span>ROBOT POSE</span><b id="robotPose">-- / -- / --°</b></div>
+            <div><span>DISTANCE LEFT</span><b id="distanceRemaining">-- m</b></div>
+            <div><span>ETA</span><b id="etaValue">-- s</b></div>
+            <div><span>RECOVERIES</span><b id="recoveries">0</b></div>
+            <div><span>ACTION SERVER</span><b id="actionServerState">WAITING</b></div>
+            <div><span>LINEAR / ANGULAR</span><b id="velocityValue">0.000 / 0.000</b></div>
+          </div>
+          <button class="danger-button wide-button" id="cancelGoalButton" type="button">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m9 9 6 6M15 9l-6 6"/></svg>
+            取消当前目标
+          </button>
+        </section>
+
+        <section class="control-section">
+          <div class="section-title"><span>STACK OPERATIONS</span><b id="stackMode">STANDBY</b></div>
+          <div class="operation-grid">
+            <button class="operation-button" id="mappingStartButton" type="button">
+              <svg viewBox="0 0 24 24"><path d="m3 6 6-3 6 3 6-3v15l-6 3-6-3-6 3V6Z"/><path d="M9 3v15M15 6v15"/></svg>
+              <span>开始建图<small id="mappingStartState">READY</small></span>
+            </button>
+            <button class="operation-button" id="mappingStopButton" type="button">
+              <svg viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12"/></svg>
+              <span>停止建图<small id="mappingStopState">READY</small></span>
+            </button>
+            <button class="operation-button" id="navigationStartButton" type="button">
+              <svg viewBox="0 0 24 24"><path d="M4 22h16M6 18V7l6-4 6 4v11M9 18v-4h6v4"/></svg>
+              <span>启动导航<small id="navigationStartState">READY</small></span>
+            </button>
+            <button class="operation-button" id="navigationStopButton" type="button">
+              <svg viewBox="0 0 24 24"><path d="M4 22h16M7 18h10V8H7v10Z"/><path d="M10 8V3h4v5"/></svg>
+              <span>停止导航<small id="navigationStopState">READY</small></span>
+            </button>
+          </div>
+          <div class="save-map-row">
+            <input id="mapName" type="text" value="map_nav_console" maxlength="64" aria-label="地图名称">
+            <button id="saveMapButton" type="button">
+              <svg viewBox="0 0 24 24"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2Z"/><path d="M17 21v-8H7v8M7 3v5h8"/></svg>
+              保存
+            </button>
+          </div>
+        </section>
+      </aside>
+    </main>
+
+    <section class="bottom-deck" aria-label="辅助信息">
+      <section class="camera-panel">
+        <div class="section-title"><span>VISION LINK</span><b id="cameraState">WAITING</b></div>
+        <div class="camera-view">
+          <img id="cameraFeed" alt="机器人相机实时画面">
+          <div class="camera-empty" id="cameraEmpty">
+            <span></span>
+            <b>等待视觉流</b>
+            <small id="cameraHint">/api/stream.mjpg</small>
+          </div>
+          <span class="camera-scanline"></span>
+        </div>
+      </section>
+
+      <section class="telemetry-panel">
+        <div class="section-title"><span>LIVE TELEMETRY</span><b id="telemetryRate">20 HZ</b></div>
+        <div class="telemetry-grid">
+          <div class="telemetry-item">
+            <span>MAP CELLS</span>
+            <strong id="mapCells">--</strong>
+            <small id="mapResolution">-- m/cell</small>
+          </div>
+          <div class="telemetry-item">
+            <span>SCAN POINTS</span>
+            <strong id="scanPoints">0</strong>
+            <small id="scanLatency">age -- ms</small>
+          </div>
+          <div class="telemetry-item">
+            <span>WS PAYLOAD</span>
+            <strong id="wsRate">0</strong>
+            <small>msg/s</small>
+          </div>
+          <div class="telemetry-item">
+            <span>SERVER UPTIME</span>
+            <strong id="serverUptime">--</strong>
+            <small>console process</small>
+          </div>
+        </div>
+        <div class="topic-strip">
+          <span>MAP <b id="mapTopic">/map</b></span>
+          <span>SCAN <b id="scanTopic">/scan</b></span>
+          <span>POSE <b id="poseTopic">/amcl_pose</b></span>
+        </div>
+      </section>
+
+      <section class="event-panel">
+        <div class="section-title"><span>EVENT STREAM</span><b>LIVE</b></div>
+        <div class="event-list" id="eventList">
+          <div class="event-empty">等待事件</div>
+        </div>
+      </section>
+    </section>
+
+    <footer class="footer">
+      <span id="footerMessage">NAV CONSOLE / READY</span>
+      <span id="footerLatency">WS -- ms</span>
+    </footer>
+  </div>
+
+  <dialog class="help-dialog" id="helpDialog">
+    <div class="help-head">
+      <div>
+        <span class="eyebrow">QUICK START</span>
+        <h2>Nav2 控制台怎么用</h2>
+      </div>
+      <button class="icon-button" id="closeHelpButton" type="button" aria-label="关闭使用说明" title="关闭">
+        <svg viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+
+    <section class="help-section">
+      <h3>先看当前模式</h3>
+      <p>页面顶部状态条会直接说明当前是否只是地图预览、雷达是否在线、Nav2 action 是否就绪。</p>
+      <div class="help-mode-list">
+        <span><i class="help-dot help-dot-green"></i>ACTION SERVER READY：可以设置初始位姿和发送导航目标</span>
+        <span><i class="help-dot help-dot-amber"></i>WAITING：地图或雷达可看，但导航栈未就绪</span>
+        <span><i class="help-dot help-dot-red"></i>ROS OFFLINE：检查 8091 服务、ROS_DOMAIN_ID 和 DDS</span>
+      </div>
+    </section>
+
+    <section class="help-section">
+      <h3>地图怎么操作</h3>
+      <ol>
+        <li>拖动地图：选择左侧手形工具后拖动，或直接拖动空白区域。</li>
+        <li>缩放：鼠标滚轮；适应全图：左侧四角图标。</li>
+        <li>选目标：点击地图图钉工具，再点击地图位置。</li>
+        <li>设初始位姿：点击十字准星工具，再点击机器人实际位置。</li>
+      </ol>
+    </section>
+
+    <section class="help-section">
+      <h3>第一次导航的顺序</h3>
+      <ol>
+        <li>修好 `/dev/wheeltec_controller` 底盘别名。</li>
+        <li>点击右侧“启动导航”，等待 `ACTION SERVER READY`。</li>
+        <li>确认车在实际建图起点后，点击“A4 起点 0,0,0”。</li>
+        <li>点击“设为初始位姿”，等待 LOCALIZATION 变为 GOOD。</li>
+        <li>选择导航目标，勾选安全确认，再点“发送导航目标”。</li>
+      </ol>
+    </section>
+
+    <section class="help-section">
+      <h3>现在为什么不能导航</h3>
+      <p>如果页面显示 WAITING，并且 Robot Pose 是 `--`，通常是底盘没有启动、AMCL 没有运行，或者 `map -> base_footprint` TF 不存在。此时不要继续点目标按钮。</p>
+    </section>
+  </dialog>
+
+  <div class="toast-stack" id="toastStack" aria-live="polite"></div>
+  <script src="/app.js" defer></script>
+</body>
+</html>
+

@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "duration_s": 45.838,
+  "output_dir": "/tmp/evi_regression_qos_20261023",
+  "results": [
+    {
+      "name": "tracker_selftest",
+      "status": "PASS",
+      "elapsed_s": 6.569,
+      "detail": "TRACKER_SELFTEST_OK stable_id=1 new_id=2",
+      "log": "/tmp/evi_regression_qos_20261023/tracker_selftest.log",
+      "artifacts": []
+    },
+    {
+      "name": "evaluator_selftest",
+      "status": "PASS",
+      "elapsed_s": 0.231,
+      "detail": "EVALUATOR_SELFTEST_OK",
+      "log": "/tmp/evi_regression_qos_20261023/evaluator_selftest.log",
+      "artifacts": []
+    },
+    {
+      "name": "static_detection_regression",
+      "status": "PASS",
+      "elapsed_s": 9.047,
+      "detail": "counts=[6, 1, 4, 1, 3, 2, 2, 2, 4, 10] expected=[6, 1, 4, 1, 3, 2, 2, 2, 4, 10]",
+      "log": "/tmp/evi_regression_qos_20261023/static_detector.log",
+      "artifacts": []
+    },
+    {
+      "name": "live_dashboard_contract",
+      "status": "PASS",
+      "elapsed_s": 2.386,
+      "detail": "camera=True detector=True tracks=13 cpu=27.01",
+      "log": "/tmp/evi_regression_qos_20261023/live_contract.json",
+      "artifacts": []
+    }
+  ]
+}

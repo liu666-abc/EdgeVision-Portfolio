@@ -1,0 +1,19 @@
+Dynamic obstacle run summary
+============================
+
+Target: (4.50, 0.00, 0.00)
+Nav2 result: SUCCEEDED
+Recoveries: 0
+Maximum sampled detour: approximately 0.45 m
+Final sampled distance from centerline: approximately 0.08 m
+Map: map_a4_20261018
+Path samples:
+  (0.53, 0.10)
+  (1.76, 0.45)
+  (3.00, 0.24)
+  (4.05, 0.08)
+
+This is a single controlled experiment, not a success-rate metric.
+The full 1.18 MB / 64,897-line log is archived in the private evidence repository.
+Original goto_run4.log SHA256:
+F5FDDF7575937D0613E61DB3FD09B46F20B8BEC850C4B89042B0E0EAE6E835A4

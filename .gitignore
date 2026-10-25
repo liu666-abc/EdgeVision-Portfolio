@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Node
+node_modules/
+npm-debug.log*
+
+# ROS2 / C++
+build/
+install/
+log/
+*.o
+*.so
+*.a
+
+# Local configuration and secrets
+.env
+.env.*
+*.pem
+*.key
+*.p12
+secrets/
+
+# Runtime generated files
+*.pid
+*.sock
+*.log
+!projects/**/evidence/**/*.log
+
+# Editors and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

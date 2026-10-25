@@ -1,0 +1,11 @@
+WARNING: topic [/evi/detections_a] does not appear to be published yet
+average rate: 25.304
+	min: 0.032s max: 0.049s std dev: 0.00355s window: 27
+average rate: 25.141
+	min: 0.032s max: 0.049s std dev: 0.00281s window: 52
+average rate: 25.086
+	min: 0.030s max: 0.052s std dev: 0.00305s window: 78
+average rate: 25.059
+	min: 0.030s max: 0.052s std dev: 0.00283s window: 103
+average rate: 25.060
+	min: 0.030s max: 0.052s std dev: 0.00273s window: 129
