@@ -251,6 +251,9 @@ param_mini_akm_a3.yaml
 - RDK 关机前的最后一轮 `spin_once` 回调和快速模式版本尚未在重启后的真实栈上复验。
 - 下次开机后必须先做静止联调，确认 `/map`、`/scan`、`map -> base_footprint` 和 `ACTION SERVER READY` 同时出现，再允许地面测试。
 
+已验证项、未验证项、已知限制和不可宣称项的完整清单见
+[LIMITATIONS.md](LIMITATIONS.md)。
+
 ## 2026-10-25 实机校正（以此节为准）
 
 ### 运行架构

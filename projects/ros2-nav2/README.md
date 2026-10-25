@@ -54,3 +54,5 @@ python3 console/server.py --config console/config.json --web-root console/web
 
 结果绑定 `0.10 m/s` 附近、走廊贴墙场景、`map_a4_20261018` 和建图起点原点。
 动态绕障为单次受控实验，不代表多场景成功率或功能安全认证。
+控制台已验证项、未验证项和已知限制见
+[console/LIMITATIONS.md](console/LIMITATIONS.md)。
