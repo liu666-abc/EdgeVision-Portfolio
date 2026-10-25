@@ -12,7 +12,7 @@
 | 项目 | 重点 | 可验证结果 |
 |---|---|---|
 | [ROS2/Nav2 移动机器人](projects/ros2-nav2/) | SLAM、AMCL、Nav2、Ackermann、Web 控制台 | 静态到点 19 s、0 次恢复、横向误差 6.5 cm；单次动态绕障成功；控制台实机 READY |
-| [RDK X5 端侧视觉](projects/edge-ai/) | YOLOv8n、INT8 PTQ、BPU、C++ ROS2、QoS 与性能测试 | COCO AP50:95 0.2541，FP32 保留率 91.38%；BPU 约 6.3 ms；双路约 25 FPS |
+| [RDK X5 端侧视觉](projects/edge-ai/) | YOLOv8n、INT8 PTQ、BPU、C++ ROS2、QoS 与性能测试 | 项目内固定阈值 AP50:95 0.2541，配对保留率 91.38%；BPU 约 6.3 ms；双路约 25 FPS |
 
 ## ROS2/Nav2 移动机器人
 
@@ -34,7 +34,8 @@
 在 RDK X5 上完成 YOLOv8n 从 ONNX、OpenExplorer INT8 PTQ 到 BPU 和 C++ ROS2
 推理链路的部署，并保留精度、延迟、并发和热数据。
 
-- COCO val2017 全量 5,000 图：FP32/INT8 AP50:95 `0.2780/0.2541`，保留率 `91.38%`。
+- 项目内固定后处理口径（`score>=0.25`，非官方 COCO 基线）下，5,000 图 FP32/INT8
+  AP50:95 为 `0.2780/0.2541`；FP32 标准低阈值基线仍待重测。
 - BPU 单帧推理均值约 `6.3 ms`，ROS2 检测结果发布约 `30 Hz`。
 - 双路视频在 `depth=5 + reliable` 下连续 10 分钟保持约 `25 FPS`。
 - 30 分钟风扇工况 soak、10 分钟 BPU/CPU 合成深度异构并发与 QoS 回归。

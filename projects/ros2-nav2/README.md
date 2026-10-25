@@ -12,9 +12,10 @@
 
 - 联调现有 ROS2 驱动与 launch，检查 topic 频率、TF、AMCL、lifecycle 和地图发布。
 - 使用 A4 走廊地图进行 Nav2 到点和动态障碍实验。
-- 在厂家驱动和底盘参数基础上，完成 Ackermann 约束配置和恢复行为树改造，将默认原地旋转
-  恢复动作替换为适合 Ackermann 底盘的方案；参数为 `vx_max 0.15 m/s`、
-  `wz_max 0.43 rad/s`、`min_turning_r 0.35 m`。
+- 在厂家驱动和底盘参数基础上，完成 Ackermann 速度/转角约束，并将含 `Spin` 的默认 Nav2
+  行为树切换为内置 `navigate_w_replanning_distance.xml`。该方案无自动恢复动作，
+  规划失败时直接 abort；参数为 `vx_max 0.15 m/s`、`wz_max 0.43 rad/s`、
+  `min_turning_r 0.35 m`。
 - 实现独立 ROS2 桥、FastDDS 预热节点和 WebSocket 控制台，支持建图、保存地图、
   Nav2 切换、初始位姿、目标下发与安全停止。
 

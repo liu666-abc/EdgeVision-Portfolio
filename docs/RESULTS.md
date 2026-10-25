@@ -17,8 +17,8 @@ ROS2 结论限定于 A4 走廊、地图原点为建图起点、低速和当前�
 
 | 指标 | 实测 | 证据 |
 |---|---:|---|
-| COCO FP32/INT8 | 0.2780 / 0.2541 | `projects/edge-ai/docs/edge-ai-freeze-2026-10-23.md` |
-| 精度保留率 | 91.38% | 同上 |
+| 项目内固定阈值 FP32/INT8 | 0.2780 / 0.2541；score≥0.25，非官方 COCO 基线 | `projects/edge-ai/docs/coco-baseline-audit.md` |
+| 项目内配对保留率 | 91.38%；仅限同口径比较 | 同上 |
 | BPU 单帧推理 | 约 6.3 ms | 同上 |
 | 双路 10 分钟 | 约 25 FPS | `projects/edge-ai/evidence/2026-10-23_qos-root-cause/` |
 | Astra S | 29.602 FPS，p95 24.364 ms | `projects/edge-ai/evidence/2026-10-23_astra-qos/` |

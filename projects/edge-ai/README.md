@@ -24,8 +24,8 @@ Image / Camera
 
 | 指标 | 结果 |
 |---|---|
-| COCO val2017 AP50:95 | FP32 `0.2780` / INT8 `0.2541` |
-| 精度保留率 | `91.38%` |
+| 项目内固定阈值 AP50:95 | FP32 `0.2780` / INT8 `0.2541`；`score>=0.25`，不是官方 COCO 基线 |
+| 项目内配对保留率 | `91.38%`；只适合同口径 FP32/INT8 比较 |
 | BPU 单帧推理 | 约 `6.3 ms` |
 | ROS2 检测发布 | 约 `30 Hz` |
 | 双路视频 | `depth=5 + reliable`，10 分钟约 `25 FPS` |
@@ -56,6 +56,8 @@ ros2 run evi_cpp_detector detector_node --ros-args \
 
 ## 边界
 
+- COCO 数值使用 `score>=0.25` 后处理截断，尚未按标准低阈值重跑 FP32/INT8；
+  详见 [COCO 基线审计](docs/coco-baseline-audit.md)。
 - 30 分钟 Soak 为风扇开启工况。
 - Astra S 测试画面无目标，不能据此声称召回率或 MOT 达标。
 - 8 帧 MOT17-mini 仅用于链路冒烟，不作为 MOT benchmark。

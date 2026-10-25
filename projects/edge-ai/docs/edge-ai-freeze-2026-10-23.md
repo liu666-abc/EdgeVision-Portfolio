@@ -56,8 +56,8 @@ C++ detector_node
 
 | 项目 | 结果 | 边界 |
 |---|---:|---|
-| 同源 OpenExplorer PTQ | COCO AP50:95 FP32 `0.2780403`，INT8 `0.2540833` | 全 5,000 图，同源模型和评估口径 |
-| FP32 精度保留率 | `91.38%` | 不能外推到所有数据集和类别 |
+| 项目内同源 PTQ（固定阈值） | FP32/INT8 AP50:95 `0.2780403/0.2540833` | 全 5,000 图；`score>=0.25` 预过滤，不是官方 COCO 基线 |
+| 项目内配对保留率 | `91.38%` | 只适合同一口径的 FP32/INT8 比较，不能外推到所有数据集和类别 |
 | 现场 BPU 推理均值 | 约 `6.3 ms` | 640x640 YOLOv8n，当前频率与输入条件 |
 | 算子边界 | Conv/heads 可下沉 BPU，DFL/NMS 保留 CPU | 不能宣称整张 ONNX 全部在 BPU 执行 |
 
@@ -179,7 +179,7 @@ MOT17-mini 只有 8 帧，仅用于验证评估链路：
 
 ### 5.1 端侧 AI 部署版
 
-> 在 RDK X5 上完成 YOLOv8n 的 ONNX 导出、OpenExplorer INT8 PTQ、BPU 部署与 C++ ROS2 推理链路；同源 COCO 验证集 AP50:95 从 FP32 `0.2780` 降至 INT8 `0.2541`，精度保留 `91.38%`，现场 BPU 推理均值约 `6.3 ms`；实现预处理、DFL/NMS、目标跟踪、状态 API 和原始证据归档。
+> 在 RDK X5 上完成 YOLOv8n 的 ONNX 导出、OpenExplorer INT8 PTQ、BPU 部署与 C++ ROS2 推理链路；在项目内固定后处理截断（`score>=0.25`）下，5,000 图 FP32/INT8 AP50:95 为 `0.2780/0.2541`，配对保留率 `91.38%`；该口径不是官方 COCO 基线，FP32 标准低阈值结果仍待重测。现场 BPU 推理均值约 `6.3 ms`，并实现预处理、DFL/NMS、目标跟踪、状态 API 和原始证据归档。
 
 > 定位双路检测吞吐异常：在 reliable 视频 publisher 下，best-effort 图像订阅并发丢帧使 B 路检测降至 `16.13 FPS`；改为 `depth=5 + reliable` 后，双路 10 分钟稳定在 `25.011/25.014 FPS`。进一步核验真实 Astra 彩色 publisher 为 reliable，2 分钟检测均值 `29.602 FPS`、延迟 p95 `24.364 ms`、40 ms 超时 0。
 
