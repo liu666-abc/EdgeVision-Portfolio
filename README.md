@@ -13,6 +13,7 @@
 |---|---|---|
 | [ROS2/Nav2 移动机器人](projects/ros2-nav2/) | SLAM、AMCL、Nav2、Ackermann、Web 控制台 | 静态到点 19 s、0 次恢复、横向误差 6.5 cm；单次动态绕障成功；控制台实机 READY |
 | [RDK X5 端侧视觉](projects/edge-ai/) | YOLOv8n、INT8 PTQ、BPU、C++ ROS2、QoS 与性能测试 | 项目内固定阈值 AP50:95 0.2541，配对保留率 91.38%；BPU 约 6.3 ms；双路约 25 FPS |
+| [STM32 + ESP32-S3 倒立摆](projects/esp32-pendulum-lvgl/) | FreeRTOS 双环 PID、LVGL、CAN、故障记录 | 2026.04-2026.06 精选源码；功能和参数可核查，未提供统一性能 benchmark |
 
 ## ROS2/Nav2 移动机器人
 
@@ -53,6 +54,7 @@
 resume/                     最终简历
 projects/ros2-nav2/         Nav2 控制台、launch、配置与 A4 证据
 projects/edge-ai/           C++ ROS2 推理节点、测试工具、文档与 benchmark
+projects/esp32-pendulum-lvgl/  STM32/ESP32 倒立摆精选源码
 docs/architecture/          系统架构图
 docs/RESULTS.md             结果汇总与证据边界
 ```
@@ -71,5 +73,6 @@ docs/RESULTS.md             结果汇总与证据边界
 - 30 分钟 soak 为风扇开启工况。
 - 无目标 Astra S 画面只验证吞吐、延迟和稳定性，不用于召回率或 MOT 指标。
 - 故障恢复由测试工具触发，不宣称为生产级 watchdog。
+- 倒立摆目录为源码快照，不作为完整固件、编译包或性能验收报告。
 
 完整数据和适用边界见 [结果汇总](docs/RESULTS.md)。
