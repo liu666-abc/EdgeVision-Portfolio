@@ -11,7 +11,7 @@
 
 | 项目 | 重点 | 可验证结果 |
 |---|---|---|
-| [ROS2/Nav2 移动机器人](projects/ros2-nav2/) | SLAM、AMCL、Nav2、Ackermann、Web 控制台 | 静态到点约 39 s、0 次恢复、横向误差 6.5 cm；单次动态绕障成功；控制台实机 READY |
+| [ROS2/Nav2 移动机器人](projects/ros2-nav2/) | SLAM、AMCL、Nav2、Ackermann、Web 控制台 | 静态到点 19 s、0 次恢复、横向误差 6.5 cm；单次动态绕障成功；控制台实机 READY |
 | [RDK X5 端侧视觉](projects/edge-ai/) | YOLOv8n、INT8 PTQ、BPU、C++ ROS2、QoS 与性能测试 | COCO AP50:95 0.2541，FP32 保留率 91.38%；BPU 约 6.3 ms；双路约 25 FPS |
 
 ## ROS2/Nav2 移动机器人
@@ -21,7 +21,7 @@
 
 - `map_a4_20261018`：708×260，0.05 m/格，原点为建图起点。
 - AMCL `(0,0,0)`：97.6% 采样点落在 1 格（5 cm）内，平均误差 2.4 cm。
-- 静态目标约 39 s 完成，0 次恢复，最大横向误差 6.5 cm；同场地开环漂移 36 cm。
+- 静态目标 19 s 完成，0 次恢复，最大横向误差 6.5 cm；同场地开环漂移 36 cm。
 - 约 0.3 m 高纸箱单次动态绕障成功，采样范围内最大绕行约 0.45 m、回中线约 8 cm。
 - 控制台提供 WebSocket 遥测、地图/雷达/TF/路径显示、建图和 Nav2 操作。
 

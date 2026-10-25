@@ -6,7 +6,7 @@
 |---|---:|---|
 | 地图尺寸 | 708×260 @ 0.05 m/格 | `projects/ros2-nav2/evidence/raw/map_a4_20261018.yaml` |
 | AMCL 定位 | 97.6% 在 1 格内，均值 2.4 cm | `projects/ros2-nav2/evidence/README.md` |
-| 静态到点 | 约 39 s，0 次恢复，6.5 cm | `projects/ros2-nav2/evidence/raw/amcl_run1.csv` |
+| 静态到点 | 19 s，0 次恢复，6.5 cm | `projects/ros2-nav2/evidence/raw/amcl_run1.csv` |
 | 动态绕障 | 单次成功，绕行 0.45 m，回中线 8 cm | `projects/ros2-nav2/evidence/raw/goto_run4_summary.txt` |
 | 控制台 | ACTION READY，零目标保持 | `projects/ros2-nav2/console/README.md` |
 
