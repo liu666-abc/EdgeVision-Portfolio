@@ -17,7 +17,7 @@
 
 ## ROS2/Nav2 移动机器人
 
-项目使用 Wheeltec 现有 ROS2 驱动与 launch 进行联调，完成 A4 走廊建图、AMCL
+项目使用厂家现有 ROS2 驱动与 launch 进行联调，完成 A4 走廊建图、AMCL
 定位、Nav2 到点和动态绕障，并开发低延迟可视化控制台。
 
 - `map_a4_20261018`：708×260，0.05 m/格，原点为建图起点。
@@ -61,7 +61,7 @@ docs/RESULTS.md             结果汇总与证据边界
 
 ## 复现说明
 
-- ROS2 控制台依赖 `aiohttp`、ROS2 Humble/TROS 与 Wheeltec 底盘驱动。运行方法见
+- ROS2 控制台依赖 `aiohttp`、ROS2 Humble/TROS 与厂家底盘驱动。运行方法见
   [项目说明](projects/ros2-nav2/README.md)。
 - 端侧视觉节点依赖 RDK X5 BPU、OpenExplorer 运行库和 TROS；构建方式见
   [项目说明](projects/edge-ai/README.md)。

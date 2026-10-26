@@ -1,10 +1,10 @@
 # ROS2/Nav2 移动机器人
 
-基于 Wheeltec mini Ackermann 平台的 ROS2 建图、定位、导航与可视化控制台项目。
+基于厂家 mini Ackermann 平台的 ROS2 建图、定位、导航与可视化控制台项目。
 
 ## 硬件与软件
 
-- RDK X5、Wheeltec mini Ackermann 底盘、激光雷达、IMU、编码器。
+- RDK X5、厂家 mini Ackermann 底盘、激光雷达、IMU、编码器。
 - ROS2 Humble/TROS、Nav2、AMCL、slam_toolbox、rosbag。
 - 控制台：Python、aiohttp、WebSocket、Canvas、HTML/CSS/JavaScript。
 
@@ -39,7 +39,7 @@
 
 ## 运行前提
 
-需要已安装的 ROS2/TROS、Wheeltec 驱动、雷达驱动和目标底盘。设备文件名、话题和
+需要已安装的 ROS2/TROS、厂家驱动、雷达驱动和目标底盘。设备文件名、话题和
 地图路径应从 `console/config.example.json` 与环境变量确认后再运行。
 
 ```bash
