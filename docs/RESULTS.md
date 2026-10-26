@@ -5,13 +5,13 @@
 | 指标 | 实测 | 证据 |
 |---|---:|---|
 | 地图尺寸 | 708×260 @ 0.05 m/格 | `projects/ros2-nav2/evidence/raw/map_a4_20261018.yaml` |
-| scan-to-map 自洽性 | 自建脚本：97.6% 在 1 格内，平均最近占据格距离 2.4 cm；无外部真值 | `projects/ros2-nav2/evidence/README.md` |
+| scan-to-map 自洽性 | 自建脚本：97.6% 在 1 格内，平均最近占据格距离 2.4 cm | `projects/ros2-nav2/evidence/README.md` |
 | 静态到点 | 19 s，0 次恢复，6.5 cm | `projects/ros2-nav2/evidence/raw/amcl_run1.csv` |
-| 动态绕障 | 单次成功，绕行 0.45 m，回中线 8 cm | `projects/ros2-nav2/evidence/raw/goto_run4_summary.txt` |
+| 地图外静态纸箱绕行 | 单次成功，绕行 0.45 m，回中线 8 cm | `projects/ros2-nav2/evidence/raw/goto_run4_summary.txt` |
 | 控制台 | ACTION READY，零目标保持 | `projects/ros2-nav2/console/README.md` |
 
-ROS2 结论限定于 A4 走廊、地图原点为建图起点、低速和当前轮式底盘。动态绕障为单次
-受控实验，不代表多场景成功率。
+ROS2 结论限定于 A4 走廊、地图原点为建图起点、低速和当前轮式底盘。纸箱绕行为单次
+受控实验，不代表动态障碍或多场景成功率。
 
 ## RDK X5 端侧视觉
 
