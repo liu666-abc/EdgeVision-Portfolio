@@ -4,7 +4,8 @@
 
 ## 硬件与软件
 
-- RDK X5、厂家 mini Ackermann 底盘、激光雷达、IMU、编码器。
+- RDK X5、厂家 mini Ackermann 底盘、N10Plus 2D 激光雷达（460800 baud，`/scan` 约
+  10 Hz）、IMU、编码器。
 - ROS2 Humble/TROS、Nav2、AMCL、slam_toolbox、rosbag。
 - 控制台：Python、aiohttp、WebSocket、Canvas、HTML/CSS/JavaScript。
 

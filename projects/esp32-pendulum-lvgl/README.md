@@ -26,8 +26,12 @@ ESP32-S3 + LVGL + TWAI
 ### STM32F103
 
 - FreeRTOS 管理 Control、Display、Key、Serial、CAN 五类任务。
+- `xTaskNotify/xTaskNotifyWait` 传递运行状态变化，避免为简单事件额外建立消息队列。
+- 使用任务栈高水位检查和栈溢出钩子观察任务资源风险。
 - 角度环和位置环双 PID，编码器采样、电机驱动和 1 ms 控制节拍。
 - 双缓冲共享状态，避免控制任务与显示/串口任务读取半更新数据。
+- 双缓冲通过 Cortex-M3 32 位对齐指针 load/store 发布快照；未使用 C11 `_Atomic`
+  或引用计数，不把它外推为通用多读者无锁队列。
 - OLED 显示角度、位置、PID 参数和运行状态。
 - IWDG 看门狗和带 magic/checksum 的 Flash 故障记录。
 - CAN 正常模式收发，与 ESP32-S3 交换控制状态。

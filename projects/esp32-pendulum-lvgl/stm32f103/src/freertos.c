@@ -165,7 +165,7 @@ extern IWDG_HandleTypeDef hiwdg;
 
 /* 双缓冲共享数据结构（用于 ISR/任务 间安全数据传输） */
 /* 双缓冲优势：相比互斥量，无需临界区保护，避免优先级反转问题 */
-/* 工作原理：ControlTask 写入一个缓冲区后原子交换指针，          */
+/* 工作原理：ControlTask 写入一个缓冲区后发布新快照指针，       */
 /* DisplayTask/SerialTask 读取另一个缓冲区，两者互不干扰。      */
 typedef struct {
     uint16_t Angle;
@@ -426,9 +426,10 @@ void StartControlTask(void *argument)
         g_pDataForISR->AnglePID    = AnglePID;
         g_pDataForISR->LocationPID = LocationPID;
 
-        /* 原子交换指针：Cortex-M3 上 32 位对齐的指针赋值是原子的，           */
-        /* DisplayTask/SerialTask 要么读到旧数据，要么读到新数据，不会读到半成品 */
-        /* 交换后：g_pDataForISR 指向旧数据（供下次写入），g_pDataForTask 指向新数据 */
+        /* 原子指针发布：Cortex-M3 上 32 位对齐指针 load/store 是原子的。      */
+        /* 读者一次加载指针后快速拷贝快照；两次角色赋值是顺序执行的，          */
+        /* 这里不使用 C11 atomic，也不把它外推为通用多读者无锁队列。          */
+        /* 切换后：g_pDataForISR 指向旧数据，g_pDataForTask 指向新数据。       */
         SharedData_t *tmp = g_pDataForISR;
         g_pDataForISR = g_pDataForTask;
         g_pDataForTask = tmp;
